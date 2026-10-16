@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellicor Technologies Ltd | Enterprise Platform Architecture & Sovereign AI</title>
+    <meta name="description" content="Vellicor Technologies Ltd is a US enterprise technology group delivering sovereign algorithmic intelligence, ServiceNow architectural governance (CTA), and autonomous voice systems with guaranteed delivery velocity.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Vellicor Technologies Ltd | Enterprise Platform Architecture & Sovereign AI">
+    <meta property="og:description" content="US-headquartered parent corporation governing enterprise digital transformation and high-velocity AI engineering across global markets.">
+    <meta property="og:type" content="website">
+
+    <!-- Security Headers via Meta -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https: 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./logo-icon.svg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#060B14',
+                        surface: '#0B132B',
+                        indigoGlow: '#818CF8',
+                        indigoPrimary: '#6366F1',
+                        cyanGlow: '#22D3EE',
+                        cyanPrimary: '#06B6D4',
+                        anshuGold: '#D4AF37',
+                        anshuTeal: '#14B8A6',
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-deep text-slate-100 font-sans selection:bg-indigoPrimary/30 selection:text-white">
+
+    <!-- HEADER / CAPSULE NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+        <div id="navbar" class="max-w-7xl mx-auto rounded-full bg-surface/90 backdrop-blur-xl border border-indigoPrimary/40 px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-2xl transition-all">
+            
+            <!-- Brand Logo -->
+            <a href="./index.html" class="flex items-center gap-3 group">
+                <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-8 sm:h-9 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-1 bg-white/[0.03] p-1 rounded-full border border-white/[0.06]">
+                <a href="./index.html" class="px-4 py-1.5 text-xs font-semibold text-indigoGlow bg-white/[0.08] rounded-full transition whitespace-nowrap">Home</a>
+                <a href="./about.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">About & Governance</a>
+                <a href="./solutions.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Enterprise Solutions</a>
+                <a href="./subsidiaries.html" class="px-4 py-1.5 text-xs font-semibold text-anshuGold hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">
+                    <i class="fa-solid fa-gem mr-1 text-anshuGold"></i> Subsidiaries (AnshuAI)
+                </a>
+                <a href="./contact.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 text-xs font-semibold text-anshuGold hover:text-white transition px-2">
+                    <span>AnshuAI Portal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+                <a href="./contact.html" class="btn-indigo-solid px-5 py-2 text-xs uppercase tracking-wider flex items-center gap-2 whitespace-nowrap">
+                    <span>Executive Briefing</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <!-- Mobile Toggle -->
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="md:hidden text-slate-200 hover:text-white p-2 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-lg border border-indigoPrimary/30 focus:outline-none focus:ring-2 focus:ring-indigoPrimary/50">
+                    <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-2 mx-auto max-w-lg rounded-2xl bg-surface/98 backdrop-blur-2xl border border-indigoPrimary/40 p-5 shadow-2xl transition-all">
+            <div class="flex flex-col gap-3 text-sm font-semibold text-slate-200">
+                <a href="./index.html" class="mobile-nav-link p-2 rounded-lg text-indigoGlow bg-white/5">Home</a>
+                <a href="./about.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">About & Governance</a>
+                <a href="./solutions.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">Enterprise Solutions</a>
+                <a href="./subsidiaries.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 text-anshuGold transition">
+                    <i class="fa-solid fa-gem mr-1"></i> Subsidiaries &bull; AnshuAI
+                </a>
+                <a href="./contact.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">Contact</a>
+                <div class="pt-3 border-t border-indigoPrimary/20 flex flex-col gap-2">
+                    <a href="mailto:contact@vellicor.com" class="text-xs text-slate-300 flex items-center gap-2 p-1">
+                        <i class="fa-regular fa-envelope text-indigoGlow"></i>
+                        <span>contact@vellicor.com</span>
+                    </a>
+                    <a href="./contact.html" class="btn-indigo-solid w-full text-center py-2.5 text-xs uppercase tracking-wider">
+                        Schedule Briefing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="max-w-4xl space-y-6">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface border border-indigoPrimary/40 text-xs font-semibold text-indigoGlow shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-cyanPrimary animate-ping"></span>
+                    <span>United States Corporate Headquarters &bull; Global Delivery Governance</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+                    Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigoGlow via-cyanGlow to-white">Enterprise Velocity</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed">
+                    <strong>Vellicor Technologies Ltd</strong> is a US technology group engineering mission-critical digital operating models. We pair top-tier <strong>ServiceNow Certified Technical Architect (CTA)</strong> governance with proprietary <strong>sovereign enterprise AI</strong> and autonomous voice intelligence.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="./solutions.html" class="btn-indigo-solid px-8 py-3.5 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2">
+                        <span>Explore Solutions Architecture</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="./subsidiaries.html" class="btn-cyan-pill px-7 py-3.5 text-xs sm:text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-gem text-anshuGold"></i>
+                        <span>AnshuAI Subsidiary Portal</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Global Credential Strip -->
+            <div class="border-y border-indigoPrimary/25 bg-surface/50 rounded-2xl p-6 shadow-xl">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white font-heading">US + APAC</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Dual-Continent Delivery Engine</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-indigoGlow font-heading">CTA-Led</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Top 1% Architectural Governance</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-cyanGlow font-heading">&lt; 400ms</div>
+                        <div class="text-xs text-slate-400 mt-0.5">Voice Telephony Turn-Taking</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-anshuGold font-heading">8–12 Wks</div>
+                        <div class="text-xs text-slate-400 mt-0.5">HeadStart Velocity Guarantee</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUBSIDIARY SHOWCASE: ANSHUAI TECHNOLOGIES -->
+    <section class="py-20 relative bg-surface/40 border-t border-indigoPrimary/25">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-anshuGold">
+                        <i class="fa-solid fa-sitemap"></i> Corporate Architecture &bull; Operating Subsidiary
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-2">
+                        AnshuAI Technologies Pvt. Ltd.
+                    </h2>
+                    <p class="text-slate-300 text-sm max-w-2xl mt-2 leading-relaxed">
+                        AnshuAI is Vellicor's flagship operating subsidiary and global Center of Excellence (CoE) for ServiceNow platform engineering and applied artificial intelligence.
+                    </p>
+                </div>
+                <a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="btn-indigo-pill px-6 py-2.5 text-xs flex items-center gap-2">
+                    <span>Visit anshuai.in</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Spotlight Card -->
+            <div class="subsidiary-card rounded-3xl p-8 lg:p-12 space-y-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="px-3 py-1 rounded-full bg-anshuGold/15 border border-anshuGold/40 text-anshuGold text-xs font-bold uppercase tracking-wider">
+                                Global Delivery Arm
+                            </span>
+                            <span class="text-xs text-slate-400">Incorporated &bull; Bengaluru, India</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">
+                            ServiceNow CTA Governance Meets HeadStart Accelerators
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Under Vellicor's US governance umbrella, AnshuAI delivers industrialized ServiceNow deployments (CSM, ITSM, FSM) and custom machine learning microservices for healthcare networks, automotive OEMs, and manufacturing plants with guaranteed 8 to 12 week go-live velocity.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                            <div class="p-4 rounded-xl bg-surface/70 border border-anshuGold/20">
+                                <div class="text-xs font-bold text-anshuGold">Healthcare Agility</div>
+                                <div class="text-[11px] text-slate-400 mt-1">Epic/Cerner FHIR APIs & Clinical EHR triage.</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface/70 border border-anshuGold/20">
+                                <div class="text-xs font-bold text-anshuTeal">Automotive Connected</div>
+                                <div class="text-[11px] text-slate-400 mt-1">CAN bus telemetry & supplier warranty triage.</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface/70 border border-anshuGold/20">
+                                <div class="text-xs font-bold text-cyanGlow">Smart Manufacturing</div>
+                                <div class="text-[11px] text-slate-400 mt-1">IoT sensor dispatch & Siemens MES sync.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 bg-[#041619] rounded-2xl p-6 border border-anshuGold/30 space-y-4">
+                        <div class="text-xs uppercase tracking-widest text-anshuGold font-bold">Onshore + Offshore Model</div>
+                        <div class="space-y-3 text-xs text-slate-300">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-anshuTeal"></i>
+                                <span>US Onshore Advisory & Architect Oversight</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-anshuTeal"></i>
+                                <span>24/7 Follow-the-Sun Engineering Sprints</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-anshuTeal"></i>
+                                <span>US Contract & Jurisdiction Protection</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-check text-anshuTeal"></i>
+                                <span>Zero-Data-Leak Air-Gapped AI Pipelines</span>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="./subsidiaries.html" class="text-xs font-bold text-anshuGold hover:underline flex items-center gap-1.5">
+                                <span>Explore Subsidiary Relationship</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUR ENTERPRISE PILLARS -->
+    <section class="py-24 border-t border-indigoPrimary/25 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-widest text-indigoGlow">Core Enterprise Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Four Pillars of Vellicor Technology
+                </h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Designed for North American enterprises seeking robust operational reliability, zero data leakage, and sub-second workflow execution.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1 -->
+                <div class="theme-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-indigoPrimary/15 border border-indigoPrimary/40 flex items-center justify-center text-indigoGlow text-xl">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading">Sovereign Enterprise AI</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Private VPC and air-gapped machine learning models fine-tuned on your business ontologies. Zero data leakage to public foundation models.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-indigoPrimary/20 text-[11px] text-indigoGlow font-mono">
+                        Air-Gapped LLMs & Vector RAG
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="theme-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-cyanPrimary/15 border border-cyanPrimary/40 flex items-center justify-center text-cyanGlow text-xl">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading">ServiceNow CTA Governance</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Certified Technical Architect (CTA) platform oversight eliminating technical debt across CSM, ITSM Pro, and Field Service Management.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-indigoPrimary/20 text-[11px] text-cyanGlow font-mono">
+                        Zero Debt OOTB Architecture
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="theme-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/40 flex items-center justify-center text-purple-300 text-xl">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading">Autonomous Voice Telephony</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Sub-400ms conversational full-duplex voice agents integrating directly into enterprise PBX and SIP trunks for Tier-1 intake and triage.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-indigoPrimary/20 text-[11px] text-purple-300 font-mono">
+                        Full-Duplex WebRTC / SIP Engine
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="theme-card rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-300 text-xl">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading">Cloud & Integration Hub</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Resilient REST/SOAP orchestration bridges connecting SAP, Oracle, Epic EHR, and industrial SCADA with tamper-evident audit logging.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-indigoPrimary/20 text-[11px] text-emerald-300 font-mono">
+                        Mission-Critical Integration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-20 relative bg-surface/30 border-t border-indigoPrimary/25">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-indigoGlow">Executive Engagement</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                Partner with Vellicor Technologies Ltd
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Connect directly with our US leadership and Certified Technical Architects to review your enterprise transformation roadmap.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="./contact.html" class="btn-indigo-solid px-8 py-3.5 text-xs uppercase tracking-wider">
+                    Schedule Executive Briefing
+                </a>
+                <a href="./about.html" class="btn-indigo-pill px-7 py-3.5 text-xs font-semibold">
+                    Review Corporate Governance
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-deep border-t border-indigoPrimary/20 pt-16 pb-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div class="lg:col-span-2 space-y-4">
+                    <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-9 w-auto">
+                    <p class="text-slate-400 leading-relaxed max-w-sm">
+                        Vellicor Technologies Ltd is a US enterprise technology holding company providing governance, sovereign AI systems, and platform modernization across North America and global markets.
+                    </p>
+                    <div class="text-[11px] text-indigoGlow">
+                        Corporate Headquarters: <strong>United States</strong> &bull; Operating Subsidiary: <strong>AnshuAI Technologies Pvt. Ltd.</strong>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Capabilities</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./solutions.html#sovereign-ai" class="hover:text-indigoGlow transition">Sovereign Enterprise AI</a></li>
+                        <li><a href="./solutions.html#servicenow" class="hover:text-indigoGlow transition">ServiceNow Architecture</a></li>
+                        <li><a href="./solutions.html#voice-telephony" class="hover:text-indigoGlow transition">Autonomous Voice Agents</a></li>
+                        <li><a href="./solutions.html#integration" class="hover:text-indigoGlow transition">Enterprise Integration Hub</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Group Subsidiaries</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./subsidiaries.html" class="text-anshuGold font-semibold hover:underline">AnshuAI Technologies</a></li>
+                        <li><a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="hover:text-anshuGold transition">anshuai.in (Live Portal)</a></li>
+                        <li><a href="./about.html#governance" class="hover:text-indigoGlow transition">CTA Governance Framework</a></li>
+                        <li><a href="./about.html#delivery" class="hover:text-indigoGlow transition">Dual-Continent Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="hover:text-indigoGlow transition">About Vellicor</a></li>
+                        <li><a href="./contact.html" class="hover:text-indigoGlow transition">Executive Briefings</a></li>
+                        <li><a href="mailto:contact@vellicor.com" class="hover:text-indigoGlow transition">contact@vellicor.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-indigoPrimary/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <p>&copy; 2026 Vellicor Technologies Ltd. All rights reserved. Registered US Corporation.</p>
+                <div class="flex items-center gap-6">
+                    <a href="./about.html" class="hover:text-slate-300 transition">Security & Compliance</a>
+                    <a href="./contact.html" class="hover:text-slate-300 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

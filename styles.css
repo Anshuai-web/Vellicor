@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Vellicor Technologies Ltd — Corporate US Enterprise Theme
+   Palette: Deep Obsidian Navy, Titanium Slate, Electric Indigo & Hyper Cyan
+   ========================================================================== */
+
+:root {
+  --bg-deep: #060B14;
+  --bg-surface: #0B132B;
+  --bg-card: rgba(11, 19, 43, 0.75);
+  --bg-card-hover: rgba(16, 28, 64, 0.92);
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-indigo: rgba(99, 102, 241, 0.35);
+  --border-indigo-bright: rgba(99, 102, 241, 0.75);
+  --border-cyan: rgba(6, 182, 212, 0.35);
+
+  --indigo-primary: #6366F1;
+  --indigo-light: #818CF8;
+  --indigo-glow: rgba(99, 102, 241, 0.28);
+
+  --cyan-primary: #06B6D4;
+  --cyan-light: #22D3EE;
+  --cyan-glow: rgba(6, 182, 212, 0.28);
+
+  --anshu-gold: #D4AF37;
+  --anshu-teal: #14B8A6;
+
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.10) 0%, transparent 40%),
+    radial-gradient(circle at 15% 55%, rgba(79, 70, 229, 0.08) 0%, transparent 35%);
+  background-attachment: fixed;
+}
+
+/* WebKit / Safari Blur Compatibility */
+.backdrop-blur-xl,
+.backdrop-blur-2xl,
+.backdrop-blur-lg,
+.backdrop-blur-md,
+#navbar,
+#mobileMenu {
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366F1;
+}
+
+/* Theme Cards */
+.theme-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-indigo);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-indigo-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(99, 102, 241, 0.3);
+}
+
+/* Subsidiary Spotlight Card (AnshuAI Showcase) */
+.subsidiary-card {
+  background: linear-gradient(145deg, rgba(7, 35, 40, 0.85) 0%, rgba(4, 22, 25, 0.95) 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(20, 184, 166, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subsidiary-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-3px);
+  box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.9), 0 0 40px -5px rgba(212, 175, 55, 0.35);
+}
+
+/* Buttons */
+.btn-indigo-solid {
+  background: linear-gradient(135deg, #818CF8 0%, #6366F1 50%, #4F46E5 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px var(--indigo-glow);
+  transition: all 0.25s ease;
+}
+
+.btn-indigo-solid:hover {
+  background: linear-gradient(135deg, #A5B4FC 0%, #818CF8 50%, #6366F1 100%);
+  box-shadow: 0 6px 28px rgba(99, 102, 241, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-indigo-pill {
+  background: rgba(99, 102, 241, 0.12);
+  border: 1.5px solid var(--indigo-primary);
+  color: #E0E7FF;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px var(--indigo-glow);
+  transition: all 0.25s ease;
+}
+
+.btn-indigo-pill:hover {
+  background: linear-gradient(135deg, #818CF8 0%, #6366F1 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-cyan-pill {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1.5px solid var(--cyan-primary);
+  color: #E2E8F0;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-cyan-pill:hover {
+  background: rgba(6, 182, 212, 0.22);
+  border-color: var(--cyan-light);
+  color: #FFFFFF;
+  box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: rgba(11, 19, 43, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
