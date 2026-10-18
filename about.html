@@ -50,14 +50,17 @@
                 <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-8 sm:h-9 w-auto">
             </a>
 
-            <nav class="hidden md:flex items-center gap-1 bg-white/[0.03] p-1 rounded-full border border-white/[0.06]">
-                <a href="./index.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Home</a>
-                <a href="./about.html" class="px-4 py-1.5 text-xs font-semibold text-indigoGlow bg-white/[0.08] rounded-full transition whitespace-nowrap">About & Governance</a>
-                <a href="./solutions.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Enterprise Solutions</a>
-                <a href="./subsidiaries.html" class="px-4 py-1.5 text-xs font-semibold text-anshuGold hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">
+            <nav class="hidden lg:flex items-center gap-1 bg-white/[0.03] p-1 rounded-full border border-white/[0.06]">
+                <a href="./index.html" class="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Home</a>
+                <a href="./about.html" class="px-3.5 py-1.5 text-xs font-semibold text-indigoGlow bg-white/[0.08] rounded-full transition whitespace-nowrap">About & Governance</a>
+                <a href="./solutions.html" class="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Enterprise Solutions</a>
+                <a href="./subsidiaries.html" class="px-3.5 py-1.5 text-xs font-semibold text-anshuGold hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">
                     <i class="fa-solid fa-gem mr-1 text-anshuGold"></i> Subsidiaries (AnshuAI)
                 </a>
-                <a href="./contact.html" class="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Contact</a>
+                <a href="./portal.html" class="px-3.5 py-1.5 text-xs font-semibold text-cyanGlow hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">
+                    <i class="fa-solid fa-satellite-dish mr-1 text-cyanGlow"></i> Enterprise Portal
+                </a>
+                <a href="./contact.html" class="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.08] rounded-full transition whitespace-nowrap">Contact</a>
             </nav>
 
             <div class="flex items-center gap-2 sm:gap-4">
@@ -65,19 +68,22 @@
                     <span>Executive Briefing</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
-                <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="md:hidden text-slate-200 hover:text-white p-2 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-lg border border-indigoPrimary/30 focus:outline-none focus:ring-2 focus:ring-indigoPrimary/50">
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden text-slate-200 hover:text-white p-2 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-lg border border-indigoPrimary/30 focus:outline-none focus:ring-2 focus:ring-indigoPrimary/50">
                     <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden md:hidden mt-2 mx-auto max-w-lg rounded-2xl bg-surface/98 backdrop-blur-2xl border border-indigoPrimary/40 p-5 shadow-2xl transition-all">
+        <div id="mobileMenu" class="hidden lg:hidden mt-2 mx-auto max-w-lg rounded-2xl bg-surface/98 backdrop-blur-2xl border border-indigoPrimary/40 p-5 shadow-2xl transition-all">
             <div class="flex flex-col gap-3 text-sm font-semibold text-slate-200">
                 <a href="./index.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">Home</a>
                 <a href="./about.html" class="mobile-nav-link p-2 rounded-lg text-indigoGlow bg-white/5">About & Governance</a>
                 <a href="./solutions.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">Enterprise Solutions</a>
                 <a href="./subsidiaries.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 text-anshuGold transition">
                     <i class="fa-solid fa-gem mr-1"></i> Subsidiaries &bull; AnshuAI
+                </a>
+                <a href="./portal.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 text-cyanGlow transition">
+                    <i class="fa-solid fa-satellite-dish mr-1"></i> Enterprise Portal & CoE Console
                 </a>
                 <a href="./contact.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 hover:text-indigoGlow transition">Contact</a>
             </div>
@@ -225,12 +231,14 @@
                     <ul class="space-y-2">
                         <li><a href="./subsidiaries.html" class="text-anshuGold font-semibold hover:underline">AnshuAI Technologies</a></li>
                         <li><a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="hover:text-anshuGold transition">anshuai.in Portal</a></li>
+                        <li><a href="./portal.html" class="hover:text-cyanGlow transition">Enterprise Operating Console</a></li>
                     </ul>
                 </div>
                 <div class="space-y-3">
                     <h4 class="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
                     <ul class="space-y-2">
                         <li><a href="./about.html" class="hover:text-indigoGlow transition">About Vellicor</a></li>
+                        <li><a href="./portal.html" class="hover:text-indigoGlow transition">Enterprise Portal</a></li>
                         <li><a href="./contact.html" class="hover:text-indigoGlow transition">Executive Briefings</a></li>
                     </ul>
                 </div>

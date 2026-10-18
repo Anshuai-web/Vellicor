@@ -72,13 +72,14 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
 
 ```
 /Users/deepakan/Desktop/Vellicor/
-├── index.html            # Corporate Homepage & Institutional Overview
+├── index.html            # Corporate Homepage & Velocity + Core Overview
+├── portal.html           # Enterprise Operating Portal & CoE Real-Time Console
 ├── about.html            # Mission, Dual-Continent Model, & CTA Governance
 ├── solutions.html        # Sovereign AI, ServiceNow, Voice Telephony, Integration
 ├── subsidiaries.html     # Dedicated Showcase for AnshuAI Technologies Pvt. Ltd.
 ├── contact.html          # Executive Briefing Request & Anti-Spam Intake
-├── styles.css            # Deep Obsidian & Electric Indigo Design System
-├── script.js             # Mobile Drawer, Scroll Effects, Honeypot Intake
+├── styles.css            # Deep Obsidian & Electric Indigo Design System + Telemetry Styles
+├── script.js             # Operating Model Simulator, Global Clocks, Voice Telemetry
 ├── logo.svg              # Primary Horizontal Corporate Brandmark
 ├── logo-icon.svg         # Standalone Geometric Monogram
 ├── favicon.png           # Browser Tab Icon
