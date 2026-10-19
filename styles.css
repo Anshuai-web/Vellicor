@@ -237,6 +237,49 @@ body, .font-sans {
   animation: subtle-float 6s ease-in-out infinite;
 }
 
+/* Metamorphosis & Butterfly Floating Animations (Thoughtworks Aesthetic) */
+@keyframes butterfly-flutter-left {
+  0%, 100% { transform: rotateY(0deg) skewY(0deg); }
+  50% { transform: rotateY(65deg) skewY(-8deg); }
+}
+
+@keyframes butterfly-flutter-right {
+  0%, 100% { transform: rotateY(0deg) skewY(0deg); }
+  50% { transform: rotateY(-65deg) skewY(8deg); }
+}
+
+@keyframes butterfly-drift-1 {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.85; }
+  85% { opacity: 0.85; }
+  100% { transform: translate(60px, -90px) rotate(12deg); opacity: 0; }
+}
+
+@keyframes butterfly-drift-2 {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.75; }
+  80% { opacity: 0.75; }
+  100% { transform: translate(-50px, -110px) rotate(-15deg); opacity: 0; }
+}
+
+.butterfly-wing-l {
+  transform-origin: right center;
+  animation: butterfly-flutter-left 0.32s ease-in-out infinite;
+}
+
+.butterfly-wing-r {
+  transform-origin: left center;
+  animation: butterfly-flutter-right 0.32s ease-in-out infinite;
+}
+
+.ambient-butterfly-1 {
+  animation: butterfly-drift-1 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.ambient-butterfly-2 {
+  animation: butterfly-drift-2 18s cubic-bezier(0.4, 0, 0.2, 1) infinite 5s;
+}
+
 /* Theme Cards */
 .theme-card {
   background: var(--bg-card);
