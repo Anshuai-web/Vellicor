@@ -126,26 +126,37 @@
         </div>
     </header>
 
-    <!-- PORTAL HERO & REAL-TIME OPERATING HUD (HIGHLY GRAPHICAL MISSION CONTROL) -->
-    <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden border-b border-indigoPrimary/20 bg-dot-matrix">
+    <!-- PORTAL HERO & REAL-TIME OPERATING HUD (MISSION CONTROL MODULE 01) -->
+    <section id="telemetry" class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden border-b border-indigoPrimary/20 bg-dot-matrix">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div class="max-w-3xl space-y-4">
                     <div class="hud-pill text-cyanGlow border-cyanPrimary/40 shadow-[0_0_20px_rgba(6,182,212,0.2)]">
                         <span class="w-2 h-2 rounded-full bg-cyanGlow pulse-dot"></span>
-                        <span class="font-mono tracking-wider">GLOBAL OPERATING CONSOLE</span>
+                        <span class="font-mono tracking-wider">MODULE 01: GLOBAL OPERATING CONSOLE</span>
                         <span class="text-slate-500">•</span>
                         <span class="text-emerald-400 font-mono">DUAL-CONTINENT SYNCHRONIZED</span>
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
-                        Enterprise <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow via-white to-anshuGold">Operating Portal</span>
+                        Enterprise <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow via-white to-anshuGold">Operating Console</span>
                     </h1>
 
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-                        Unifying the dual forces of <strong>Vellicor</strong>: Rapid kinetic <strong>velocity</strong> (accelerated enterprise AI & ServiceNow delivery) anchored by an unshakeable <strong>strong core</strong> (US Delaware legal jurisdiction, Certified Technical Architect governance, and CSDM 4.0 data integrity).
+                        Welcome to the live delivery cockpit of <strong>Vellicor Technologies Ltd</strong>. Designed for enterprise CIOs, CTOs, and platform leaders, this console replaces black-box consulting with real-time observability—connecting US Delaware parent legal governance with 24/7 Follow-the-Sun sprint execution at our Bengaluru Center of Excellence (AnshuAI).
                     </p>
+
+                    <!-- Quick Module Navigation Strip -->
+                    <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
+                        <a href="#telemetry" class="px-3 py-1.5 rounded-lg bg-surface/90 border border-indigoPrimary/40 text-cyanGlow hover:border-cyanGlow transition">01 Telemetry</a>
+                        <a href="#topology" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">02 Circuit Topology</a>
+                        <a href="#lifecycle" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">03 4-Stage Lifecycle</a>
+                        <a href="#directory" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">04 Directory</a>
+                        <a href="#voice-lab" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">05 Voice Lab</a>
+                        <a href="#calculator" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">06 ROI Calculator</a>
+                        <a href="#vault" class="px-3 py-1.5 rounded-lg bg-surface/60 border border-white/10 text-slate-300 hover:text-white hover:border-indigoPrimary transition">07 Sovereign Vault</a>
+                    </div>
                 </div>
 
                 <!-- Follow the Sun Dual-Continent Clocks -->
@@ -326,20 +337,20 @@
         </div>
     </section>
 
-    <!-- SECTION 1: INTERACTIVE DUAL-CONTINENT ARCHITECTURE TOPOLOGY MAP -->
-    <section class="py-20 relative bg-surface/20 border-b border-indigoPrimary/20">
+    <!-- MODULE 02: INTERACTIVE DUAL-CONTINENT ARCHITECTURE TOPOLOGY MAP -->
+    <section id="topology" class="py-20 relative bg-surface/20 border-b border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
                 <div class="hud-pill text-indigoGlow border-indigoPrimary/30">
                     <i class="fa-solid fa-network-wired text-indigoGlow"></i>
-                    <span>TOPOLOGY VISUALIZER</span>
+                    <span>MODULE 02: INFRASTRUCTURE TOPOLOGY</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                     Dual-Continent Operating Topology
                 </h2>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Click between nodes to inspect the unified infrastructure connecting North American executive oversight to specialized APAC Center of Excellence (CoE) delivery squads.
+                    Click between nodes to inspect the unified infrastructure connecting North American executive oversight in Delaware to specialized APAC Center of Excellence (CoE) delivery squads in Bengaluru.
                 </p>
             </div>
 
@@ -468,14 +479,14 @@
         </div>
     </section>
 
-    <!-- SECTION 2: PARENT-SUBSIDIARY LIFECYCLE SIMULATOR (CORE FEATURE) -->
-    <section class="py-20 relative">
+    <!-- MODULE 03: PARENT-SUBSIDIARY LIFECYCLE SIMULATOR -->
+    <section id="lifecycle" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
                 <div class="hud-pill text-cyanGlow border-cyanPrimary/30">
                     <i class="fa-solid fa-arrows-spin text-cyanGlow"></i>
-                    <span>EXECUTION LIFECYCLE</span>
+                    <span>MODULE 03: EXECUTION LIFECYCLE</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                     4-Stage Engagement Architecture
@@ -543,12 +554,12 @@
         </div>
     </section>
 
-    <!-- SECTION 3: DUAL-ENTITY CAPABILITIES DIRECTORY WITH GRAPHIC HERALDIC BADGES -->
-    <section class="py-20 bg-surface/30 border-y border-indigoPrimary/20">
+    <!-- MODULE 04: DUAL-ENTITY CAPABILITIES DIRECTORY -->
+    <section id="directory" class="py-20 bg-surface/30 border-y border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-anshuGold font-mono">Corporate Registry & Capabilities</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-anshuGold font-mono">MODULE 04: CORPORATE REGISTRY &amp; CAPABILITIES</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white mt-1">Dual-Entity Operating Directory</h2>
                 </div>
                 
@@ -665,15 +676,15 @@
         </div>
     </section>
 
-    <!-- SECTION 4: INTERACTIVE TELEMETRY LAB — VOICE ENGINE SUB-400MS BENCHMARK (HIGHLY GRAPHICAL STUDIO) -->
-    <section class="py-20 relative">
+    <!-- MODULE 05: INTERACTIVE TELEMETRY LAB — VOICE ENGINE SUB-400MS BENCHMARK -->
+    <section id="voice-lab" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 space-y-5">
                     <div class="hud-pill text-cyanGlow border-cyanPrimary/40">
                         <i class="fa-solid fa-wave-square text-cyanGlow"></i>
-                        <span>VOICE ENGINE TELEMETRY</span>
+                        <span>MODULE 05: VOICE TELEMETRY LAB</span>
                     </div>
 
                     <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
@@ -846,17 +857,17 @@
         </div>
     </section>
 
-    <!-- SECTION 5: TRANSFORMATION VELOCITY & ROI CALCULATOR (GRAPHICAL GANTT + SPEED METER) -->
-    <section class="py-20 bg-surface/40 border-t border-indigoPrimary/20">
+    <!-- MODULE 06: TRANSFORMATION VELOCITY & ROI CALCULATOR -->
+    <section id="calculator" class="py-20 bg-surface/40 border-t border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
                 <div class="hud-pill text-anshuGold border-anshuGold/30">
                     <i class="fa-solid fa-calculator text-anshuGold"></i>
-                    <span>STRATEGIC IMPACT ANALYSIS</span>
+                    <span>MODULE 06: STRATEGIC ROI &amp; VELOCITY</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-                    Velocity & Core Impact Calculator
+                    Velocity &amp; Core Impact Calculator
                 </h2>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Compare Vellicor's dual-continent velocity model against traditional multi-tiered legacy consultancy timelines.
@@ -992,17 +1003,17 @@
         </div>
     </section>
 
-    <!-- SECTION 6: SOVEREIGN SECURITY & COMPLIANCE VAULT WITH GRAPHICAL ISOMETRIC BADGES -->
-    <section class="py-20 relative bg-surface/20 border-t border-indigoPrimary/20">
+    <!-- MODULE 07: SOVEREIGN SECURITY & COMPLIANCE VAULT -->
+    <section id="vault" class="py-20 relative bg-surface/20 border-t border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
                 <div class="hud-pill text-emerald-400 border-emerald-400/30">
                     <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-                    <span>SOVEREIGN VAULT</span>
+                    <span>MODULE 07: SOVEREIGN VAULT</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-                    Institutional Governance & Compliance Vault
+                    Institutional Governance &amp; Compliance Vault
                 </h2>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Designed for defense, healthcare, and financial services institutions requiring air-tight regulatory isolation and auditability.
@@ -1132,12 +1143,12 @@
         </div>
     </section>
 
-    <!-- SECTION 7: CALL TO ACTION / BRIEFING INTAKE -->
-    <section class="py-20 relative bg-surface/30 border-t border-indigoPrimary/25">
+    <!-- MODULE 08: CALL TO ACTION / BRIEFING INTAKE -->
+    <section id="intake" class="py-20 relative bg-surface/30 border-t border-indigoPrimary/25">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <div class="hud-pill text-indigoGlow border-indigoPrimary/30">
                 <i class="fa-solid fa-handshake text-indigoGlow"></i>
-                <span>DIRECT ENGAGEMENT</span>
+                <span>MODULE 08: DIRECT ENGAGEMENT</span>
             </div>
             <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                 Initiate Executive Transformation Briefing
@@ -1181,7 +1192,17 @@
                 </div>
 
                 <div class="space-y-3">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Group Subsidiaries</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Thought Leadership</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./radar.html" class="text-indigoGlow font-semibold hover:underline">Technology Radar</a></li>
+                        <li><a href="./portal.html#telemetry" class="hover:text-cyanGlow transition">Live Operating Telemetry</a></li>
+                        <li><a href="./portal.html#voice-lab" class="hover:text-indigoGlow transition">Voice Telemetry Lab</a></li>
+                        <li><a href="./portal.html#calculator" class="hover:text-anshuGold transition">Velocity &amp; ROI Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Group Network</h4>
                     <ul class="space-y-2">
                         <li><a href="./subsidiaries.html" class="text-anshuGold font-semibold hover:underline">AnshuAI Technologies</a></li>
                         <li><a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="hover:text-anshuGold transition">anshuai.in (Live Portal)</a></li>
@@ -1194,7 +1215,7 @@
                     <h4 class="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
                     <ul class="space-y-2">
                         <li><a href="./about.html" class="hover:text-indigoGlow transition">About Vellicor</a></li>
-                        <li><a href="./portal.html" class="hover:text-indigoGlow transition">Enterprise Portal</a></li>
+                        <li><a href="./radar.html" class="hover:text-indigoGlow transition">Technology Radar</a></li>
                         <li><a href="./contact.html" class="hover:text-indigoGlow transition">Executive Briefings</a></li>
                         <li><a href="mailto:admin@vellicortech.com" class="hover:text-indigoGlow transition">admin@vellicortech.com</a></li>
                     </ul>
@@ -1205,6 +1226,7 @@
                 <p>&copy; 2026 Vellicor Technologies Ltd. All rights reserved. Registered US Corporation.</p>
                 <div class="flex items-center gap-6">
                     <a href="./about.html" class="hover:text-slate-300 transition">Security & Compliance</a>
+                    <a href="./radar.html" class="hover:text-slate-300 transition">Technology Radar</a>
                     <a href="./portal.html" class="hover:text-slate-300 transition">Operating Telemetry</a>
                     <a href="./contact.html" class="hover:text-slate-300 transition">Contact</a>
                 </div>
