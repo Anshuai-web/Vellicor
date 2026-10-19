@@ -483,4 +483,70 @@ body {
   filter: drop-shadow(0 0 6px #818CF8);
 }
 
+/* Cyber Frame & Corner Brackets */
+.cyber-frame {
+  position: relative;
+}
+
+.cyber-frame::before,
+.cyber-frame::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: rgba(34, 211, 238, 0.4);
+  pointer-events: none;
+}
+
+.cyber-frame::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+}
+
+.cyber-frame::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 1.5px solid;
+  border-right: 1.5px solid;
+}
+
+/* Radar Sweep Animation */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.radar-sweep-line {
+  transform-origin: 450px 140px;
+  animation: radarSweep 8s linear infinite;
+}
+
+/* Hologram Glow Badges */
+.hologram-glow {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(99, 102, 241, 0.08) 50%, rgba(34, 211, 238, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 8px 24px -6px rgba(0, 0, 0, 0.6);
+}
+
+/* Equalizer Dynamic Animation for Audio Spectrum */
+@keyframes eqBounce {
+  0%, 100% { height: 15%; }
+  50% { height: 95%; }
+}
+
+.eq-bar {
+  animation: eqBounce 0.8s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(1) { animation-duration: 0.6s; animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { animation-duration: 0.9s; animation-delay: 0.25s; }
+.eq-bar:nth-child(3) { animation-duration: 0.7s; animation-delay: 0.05s; }
+.eq-bar:nth-child(4) { animation-duration: 1.1s; animation-delay: 0.3s; }
+.eq-bar:nth-child(5) { animation-duration: 0.8s; animation-delay: 0.15s; }
+.eq-bar:nth-child(6) { animation-duration: 0.65s; animation-delay: 0.2s; }
+.eq-bar:nth-child(7) { animation-duration: 1.0s; animation-delay: 0.35s; }
+.eq-bar:nth-child(8) { animation-duration: 0.75s; animation-delay: 0.1s; }
+
+
 
