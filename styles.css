@@ -281,3 +281,183 @@ body {
 .core-gradient-ring {
   background: conic-gradient(from 180deg at 50% 50%, #6366F1 0deg, #22D3EE 120deg, #D4AF37 240deg, #6366F1 360deg);
 }
+
+/* ==========================================================================
+   MODERN BENTO GRID & CYBER GRID SYSTEM
+   ========================================================================== */
+
+/* Modern Dot Matrix Background */
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-cyber {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+}
+
+/* Radial Mask for Vignetted Grids */
+.mask-radial {
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 60%, transparent 100%);
+}
+
+/* Modern Bento Card with Subtle Gradient Borders & Frosted Glass */
+.bento-card {
+  position: relative;
+  background: rgba(11, 19, 43, 0.70);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.6), rgba(34, 211, 238, 0.6), transparent);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.bento-card:hover {
+  border-color: rgba(99, 102, 241, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.85),
+    0 0 30px -5px rgba(99, 102, 241, 0.25),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-glow-cyan:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.85),
+    0 0 30px -5px rgba(6, 182, 212, 0.3);
+}
+
+.bento-glow-gold:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.85),
+    0 0 30px -5px rgba(212, 175, 55, 0.25);
+}
+
+/* Modern HUD Pill Badges */
+.hud-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(11, 19, 43, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Topology Interactive Canvas & Node Network */
+.topology-node {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.topology-node.active {
+  border-color: #6366F1;
+  background: rgba(16, 28, 64, 0.95);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.topology-node-gold.active {
+  border-color: #D4AF37;
+  background: rgba(26, 38, 30, 0.95);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Modern Cyber Range Slider */
+.range-slider-modern {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: #1E293B;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.range-slider-modern::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #22D3EE;
+  cursor: pointer;
+  border: 2px solid #060B14;
+  box-shadow: 0 0 12px #22D3EE;
+  transition: all 0.15s ease;
+}
+
+.range-slider-modern::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 18px #22D3EE, 0 0 6px #6366F1;
+}
+
+.range-slider-modern::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #22D3EE;
+  cursor: pointer;
+  border: 2px solid #060B14;
+  box-shadow: 0 0 12px #22D3EE;
+}
+
+/* Subtle Shimmer Sweep */
+@keyframes shimmerSweep {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+.shimmer-trigger {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-trigger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-150%);
+}
+
+.shimmer-trigger:hover::after {
+  animation: shimmerSweep 0.9s ease-in-out;
+}
+

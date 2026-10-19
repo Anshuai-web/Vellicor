@@ -52,7 +52,173 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 2. Interactive Parent-Subsidiary Dual Operating Model Simulator
+    // 2. Interactive Topology Visualizer (Dual-Continent Network Engine)
+    // ----------------------------------------------------------------------
+    const topologyNodes = {
+        us: {
+            title: "Vellicor Technologies Ltd (Delaware, USA)",
+            subtitle: "Designated US Parent Corporate Holding & Institutional Anchor",
+            status: "SOVEREIGN JURISDICTION ACTIVE",
+            statusClass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+            icon: "fa-scale-balanced",
+            badge: "US Parent Node",
+            badgeClass: "bg-indigoPrimary/20 text-indigoGlow border-indigoPrimary/40",
+            description: "Direct contractual relationship under United States Delaware corporate law. Houses executive advisory, intellectual property patent custody, master client agreements (MSA), and top 1% ServiceNow Certified Technical Architect (CTA) governance.",
+            specs: [
+                { label: "Legal Jurisdiction", value: "Delaware, United States (Enforceable MSA)" },
+                { label: "Compliance Boundary", value: "SOC2 Type II, HIPAA FHIR, NIST 800-53" },
+                { label: "Architectural Lead", value: "ServiceNow CTA Certified Signoff" },
+                { label: "IP Protection", value: "Client-Retained Weights & Sovereign Escrow" }
+            ],
+            metrics: {
+                metric1: { name: "Contract Enforceability", val: "100% US Court" },
+                metric2: { name: "Architectural Debt", val: "Zero-Debt Guardrails" },
+                metric3: { name: "Security Audit", val: "SOC2 Type II Continuous" }
+            }
+        },
+        bridge: {
+            title: "Sovereign Air-Gapped Transit Bridge",
+            subtitle: "Encrypted Transcontinental High-Throughput Transit Tunnel",
+            status: "ENCRYPTED PIPE: 182ms FIBER PING",
+            statusClass: "text-cyanGlow bg-cyanPrimary/10 border-cyanPrimary/30",
+            icon: "fa-shield-halved",
+            badge: "Quantum-Safe Tunnel",
+            badgeClass: "bg-cyanPrimary/20 text-cyanGlow border-cyanPrimary/40",
+            description: "Dedicated private virtual network pairing Delaware executive oversight with Bengaluru engineering execution. Enforces strict mutual TLS 1.3 encryption, client-isolated VPC peering, automated CI/CD continuous regression testing, and zero external egress leakage.",
+            specs: [
+                { label: "Transit Protocol", value: "Mutual TLS 1.3 / Air-Gapped VPC Peering" },
+                { label: "Round-Trip Latency", value: "182ms Transcontinental Fiber Trunk" },
+                { label: "Data Egress", value: "0.00% Third-Party Telemetry Leakage" },
+                { label: "Relay Cadence", value: "Follow-the-Sun Continuous Automated CI/CD" }
+            ],
+            metrics: {
+                metric1: { name: "Encryption Standard", val: "AES-256-GCM / Post-Quantum" },
+                metric2: { name: "Packet Loss", val: "0.00% Guaranteed SLA" },
+                metric3: { name: "Handoff Velocity", val: "Continuous Follow-the-Sun" }
+            }
+        },
+        apac: {
+            title: "AnshuAI Technologies Pvt. Ltd. (Bengaluru, India)",
+            subtitle: "Global Engineering Delivery Center & Wholly-Owned Subsidiary CoE",
+            status: "24/7 SPRINT ALPHA IN EXECUTION",
+            statusClass: "text-anshuGold bg-anshuGold/10 border-anshuGold/30",
+            icon: "fa-bolt-lightning",
+            badge: "APAC Delivery CoE",
+            badgeClass: "bg-anshuGold/20 text-anshuGold border-anshuGold/40",
+            description: "The primary high-velocity delivery arm housing specialized engineering squads. Drives accelerated 2-week agile sprints, sub-400ms full-duplex voice telephony engines, HeadStart pre-configured industry accelerators, and 24/7 Follow-the-Sun operational site reliability.",
+            specs: [
+                { label: "Delivery Center HQ", value: "Bengaluru, Karnataka, India" },
+                { label: "Velocity Benchmark", value: "8–12 Week Production Cutover" },
+                { label: "Voice Telephony SLA", value: "Sub-400ms Conversational Duplex" },
+                { label: "Delivery Engine", value: "HeadStart Pre-Engineered IP Modules" }
+            ],
+            metrics: {
+                metric1: { name: "Sprint Cycle", val: "2-Week Agile Delivery" },
+                metric2: { name: "Voice Turn Latency", val: "362ms Benchmark SLA" },
+                metric3: { name: "Operational Window", val: "24/7 Follow-the-Sun" }
+            }
+        }
+    };
+
+    const topologyBtns = document.querySelectorAll('[data-topology-target]');
+    const topologyDetailPanel = document.getElementById('topologyDetailPanel');
+
+    function renderTopologyNode(nodeKey) {
+        const node = topologyNodes[nodeKey];
+        if (!node || !topologyDetailPanel) return;
+
+        topologyBtns.forEach(btn => {
+            const target = btn.getAttribute('data-topology-target');
+            if (target === nodeKey) {
+                btn.classList.add('active', 'border-indigoPrimary');
+                btn.classList.remove('border-white/10');
+            } else {
+                btn.classList.remove('active', 'border-indigoPrimary');
+                btn.classList.add('border-white/10');
+            }
+        });
+
+        topologyDetailPanel.innerHTML = `
+            <div class="space-y-6 animate-fadeIn">
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-indigoPrimary/20">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-xl bg-indigoPrimary/20 border border-indigoPrimary/40 flex items-center justify-center text-indigoGlow text-lg">
+                            <i class="fa-solid ${node.icon}"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-extrabold text-white font-heading">${node.title}</h3>
+                            <div class="text-xs text-slate-400">${node.subtitle}</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-mono font-bold border ${node.statusClass}">
+                            ${node.status}
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold border ${node.badgeClass}">
+                            ${node.badge}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-7 space-y-4">
+                        <p class="text-slate-300 text-sm leading-relaxed">${node.description}</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            ${node.specs.map(spec => `
+                                <div class="p-3 rounded-xl bg-surface/80 border border-white/5 space-y-1">
+                                    <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">${spec.label}</div>
+                                    <div class="text-xs font-bold text-white">${spec.value}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-surface/90 rounded-2xl p-5 border border-indigoPrimary/30 space-y-4">
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center justify-between">
+                            <span>Live Node Telemetry</span>
+                            <span class="text-emerald-400 text-[11px] font-mono flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span> SYNCHRONIZED
+                            </span>
+                        </div>
+                        <div class="space-y-3 font-mono text-xs">
+                            <div class="p-2.5 rounded-lg bg-deep/80 border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-400">${node.metrics.metric1.name}:</span>
+                                <span class="text-white font-bold">${node.metrics.metric1.val}</span>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-deep/80 border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-400">${node.metrics.metric2.name}:</span>
+                                <span class="text-cyanGlow font-bold">${node.metrics.metric2.val}</span>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-deep/80 border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-400">${node.metrics.metric3.name}:</span>
+                                <span class="text-anshuGold font-bold">${node.metrics.metric3.val}</span>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="./contact.html" class="btn-indigo-solid w-full text-center py-2.5 text-xs uppercase tracking-wider block shimmer-trigger">
+                                Inspect Node Specifications <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    if (topologyBtns.length > 0) {
+        topologyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-topology-target');
+                renderTopologyNode(target);
+            });
+        });
+        // Initial render
+        renderTopologyNode('us');
+    }
+
+    // ----------------------------------------------------------------------
+    // 3. Interactive Parent-Subsidiary Dual Operating Model Simulator
     // ----------------------------------------------------------------------
     const stageData = {
         1: {
@@ -220,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
                         <div class="pt-2">
-                            <a href="./contact.html" class="btn-indigo-solid w-full text-center py-2 text-xs uppercase tracking-wider block">
+                            <a href="./contact.html" class="btn-indigo-solid w-full text-center py-2 text-xs uppercase tracking-wider block shimmer-trigger">
                                 Initiate Stage Consultation <i class="fa-solid fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -242,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 3. Follow-the-Sun Dual-Continent Live Clocks
+    // 4. Follow-the-Sun Dual-Continent Live Clocks
     // ----------------------------------------------------------------------
     function updateClocks() {
         const now = new Date();
@@ -272,22 +438,76 @@ document.addEventListener('DOMContentLoaded', () => {
         const blrDate = document.getElementById('blrDate');
 
         if (nyClock) nyClock.textContent = formatTime('America/New_York');
-        if (nyDate) nyDate.textContent = formatDate('America/New_York') + ' (US Eastern / Parent HQ)';
+        if (nyDate) nyDate.textContent = formatDate('America/New_York') + ' (EDT / US Jurisdiction)';
         
         if (blrClock) blrClock.textContent = formatTime('Asia/Kolkata');
-        if (blrDate) blrDate.textContent = formatDate('Asia/Kolkata') + ' (IST / Engineering CoE)';
+        if (blrDate) blrDate.textContent = formatDate('Asia/Kolkata') + ' (IST / CoE Sprint Relay)';
     }
 
     updateClocks();
     setInterval(updateClocks, 1000);
 
     // ----------------------------------------------------------------------
-    // 4. Sub-400ms Voice Telephony Latency Simulator
+    // 5. Sub-400ms Voice Telephony Benchmark with Web Audio API Synthesizer
     // ----------------------------------------------------------------------
     const voiceSimulateBtn = document.getElementById('voiceSimulateBtn');
     const voiceLatencyValue = document.getElementById('voiceLatencyValue');
     const voiceLogOutput = document.getElementById('voiceLogOutput');
     const waveformContainer = document.getElementById('waveformContainer');
+    const logTabBtn = document.getElementById('logTabBtn');
+    const packetTabBtn = document.getElementById('packetTabBtn');
+    const voicePacketView = document.getElementById('voicePacketView');
+
+    // Tab Switcher (Console vs Packet JSON)
+    if (logTabBtn && packetTabBtn && voiceLogOutput && voicePacketView) {
+        logTabBtn.addEventListener('click', () => {
+            logTabBtn.classList.add('bg-indigoPrimary/20', 'text-cyanGlow', 'font-bold');
+            logTabBtn.classList.remove('text-slate-400');
+            packetTabBtn.classList.remove('bg-indigoPrimary/20', 'text-cyanGlow', 'font-bold');
+            packetTabBtn.classList.add('text-slate-400');
+
+            voiceLogOutput.classList.remove('hidden');
+            voicePacketView.classList.add('hidden');
+        });
+
+        packetTabBtn.addEventListener('click', () => {
+            packetTabBtn.classList.add('bg-indigoPrimary/20', 'text-cyanGlow', 'font-bold');
+            packetTabBtn.classList.remove('text-slate-400');
+            logTabBtn.classList.remove('bg-indigoPrimary/20', 'text-cyanGlow', 'font-bold');
+            logTabBtn.classList.add('text-slate-400');
+
+            voicePacketView.classList.remove('hidden');
+            voiceLogOutput.classList.add('hidden');
+        });
+    }
+
+    // Modern Web Audio Chime Synth
+    function playTelemetryChime() {
+        try {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            if (!AudioCtx) return;
+            const ctx = new AudioCtx();
+            const now = ctx.currentTime;
+
+            // Oscillator 1 (High crisp ping)
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(880, now);
+            osc.frequency.exponentialRampToValueAtTime(440, now + 0.18);
+
+            gain.gain.setValueAtTime(0.08, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
+
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+
+            osc.start(now);
+            osc.stop(now + 0.22);
+        } catch (e) {
+            // Audio context not allowed or unsupported; fail silently
+        }
+    }
 
     if (voiceSimulateBtn && voiceLatencyValue && voiceLogOutput) {
         let isSimulating = false;
@@ -298,41 +518,50 @@ document.addEventListener('DOMContentLoaded', () => {
             voiceSimulateBtn.disabled = true;
             voiceSimulateBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Measuring Full-Duplex Turn...`;
 
+            playTelemetryChime();
+
+            // Ensure console tab is active
+            if (logTabBtn && voiceLogOutput) {
+                logTabBtn.click();
+            }
+
             if (waveformContainer) {
                 waveformContainer.classList.remove('opacity-40');
                 waveformContainer.classList.add('opacity-100');
             }
 
             voiceLogOutput.innerHTML = `
-                <div class="text-cyanGlow">&gt; Initiating sub-400ms WebRTC / SIP duplex telemetry ping...</div>
+                <div class="text-cyanGlow">&gt; [INIT] Streaming sub-400ms WebRTC / SIP duplex telemetry ping...</div>
             `;
 
             setTimeout(() => {
                 voiceLogOutput.innerHTML += `
-                    <div class="text-slate-300">&gt; User speech input detected (SIP trunk buffer: 48ms)</div>
+                    <div class="text-slate-300">&gt; [SIP TRUNK] VAD speech detection confirmed (+48ms)</div>
                 `;
             }, 80);
 
             setTimeout(() => {
                 voiceLogOutput.innerHTML += `
-                    <div class="text-slate-300">&gt; Streaming ASR tokenization completed (duration: 62ms)</div>
+                    <div class="text-slate-300">&gt; [STREAMING ASR] Tokenized 14 phonemes (+62ms)</div>
                 `;
             }, 160);
 
             setTimeout(() => {
                 voiceLogOutput.innerHTML += `
-                    <div class="text-slate-300">&gt; Sovereign SLM reasoning & intent dispatch (duration: 145ms)</div>
+                    <div class="text-slate-300">&gt; [SOVEREIGN SLM] Zero-retention private intent dispatch (+145ms)</div>
                 `;
             }, 260);
 
             setTimeout(() => {
-                const finalLatency = Math.floor(Math.random() * 25) + 355; // 355-380ms
+                const finalLatency = Math.floor(Math.random() * 20) + 355; // 355-375ms
                 voiceLatencyValue.textContent = `${finalLatency} ms`;
 
                 voiceLogOutput.innerHTML += `
-                    <div class="text-indigoGlow">&gt; Neural TTS audio synthesis & first packet audio burst (duration: 104ms)</div>
-                    <div class="text-emerald-400 font-bold">&gt; Benchmark Confirmed: ${finalLatency}ms round-trip (Under 400ms SLA). Zero speech collision.</div>
+                    <div class="text-indigoGlow">&gt; [NEURAL TTS] First packet audio burst dispatched (+104ms)</div>
+                    <div class="text-emerald-400 font-bold">&gt; [PASS] Confirmed Turn Latency: ${finalLatency}ms round-trip (Under 400ms SLA).</div>
                 `;
+
+                playTelemetryChime();
 
                 voiceSimulateBtn.disabled = false;
                 voiceSimulateBtn.innerHTML = `<i class="fa-solid fa-play mr-2"></i> Re-Run Voice Telemetry Benchmark`;
@@ -342,10 +571,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 5. Enterprise Velocity vs Core Scope Calculator
+    // 6. Enterprise Velocity vs Core Scope Calculator (Reactive Slider & TCO)
     // ----------------------------------------------------------------------
     const calcScopeSelect = document.getElementById('calcScopeSelect');
     const calcScaleSelect = document.getElementById('calcScaleSelect');
+    const calcSeatsSlider = document.getElementById('calcSeatsSlider');
+    const calcSeatsDisplay = document.getElementById('calcSeatsDisplay');
     const calcVellicorTime = document.getElementById('calcVellicorTime');
     const calcTraditionalTime = document.getElementById('calcTraditionalTime');
     const calcCostSavings = document.getElementById('calcCostSavings');
@@ -356,47 +587,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scope = calcScopeSelect.value;
         const scale = calcScaleSelect.value;
+        const seats = calcSeatsSlider ? parseInt(calcSeatsSlider.value, 10) : 12500;
+
+        if (calcSeatsDisplay) {
+            calcSeatsDisplay.textContent = `${seats.toLocaleString()} Users`;
+        }
 
         let vellicorWeeks = "8–10 Weeks";
         let traditionalMonths = "12–15 Months";
         let costAdvantage = "55% TCO Savings";
         let archStandard = "CSDM 4.0 Clean Core & Zero Debt";
 
+        // Dynamic Dollar Estimate based on seats
+        let estimatedSavingsMillions = ((seats * 120) / 1000000).toFixed(2);
+
         if (scope === 'servicenow') {
             if (scale === 'enterprise') {
                 vellicorWeeks = "8–12 Weeks";
                 traditionalMonths = "14–18 Months";
-                costAdvantage = "60% TCO Savings";
+                costAdvantage = `60% TCO ($${estimatedSavingsMillions}M Saved)`;
             } else if (scale === 'fortune500') {
                 vellicorWeeks = "10–14 Weeks";
                 traditionalMonths = "18–24 Months";
-                costAdvantage = "65% TCO Savings";
+                costAdvantage = `65% TCO ($${(estimatedSavingsMillions * 1.4).toFixed(2)}M Saved)`;
             } else {
                 vellicorWeeks = "6–8 Weeks";
                 traditionalMonths = "9–12 Months";
-                costAdvantage = "50% TCO Savings";
+                costAdvantage = `50% TCO ($${estimatedSavingsMillions}M Saved)`;
             }
         } else if (scope === 'sovereign_ai') {
             if (scale === 'enterprise' || scale === 'fortune500') {
                 vellicorWeeks = "8–12 Weeks";
                 traditionalMonths = "12–18 Months";
-                costAdvantage = "65% TCO Savings";
+                costAdvantage = `65% TCO ($${(estimatedSavingsMillions * 1.5).toFixed(2)}M Saved)`;
                 archStandard = "100% Air-Gapped VPC + Zero Retention";
             } else {
                 vellicorWeeks = "6–8 Weeks";
                 traditionalMonths = "8–10 Months";
-                costAdvantage = "55% TCO Savings";
+                costAdvantage = `55% TCO ($${estimatedSavingsMillions}M Saved)`;
                 archStandard = "Private VPC & Client-Retained Weights";
             }
         } else if (scope === 'voice') {
             vellicorWeeks = "4–6 Weeks";
             traditionalMonths = "8–12 Months";
-            costAdvantage = "70% Call Center TCO Reduction";
+            costAdvantage = `70% Call Center TCO Reduction`;
             archStandard = "Sub-400ms SIP / WebRTC Engine";
         } else if (scope === 'full_suite') {
             vellicorWeeks = "12–16 Weeks";
             traditionalMonths = "24–36 Months";
-            costAdvantage = "65% Unified TCO Savings";
+            costAdvantage = `65% Unified TCO ($${(estimatedSavingsMillions * 2.1).toFixed(2)}M Saved)`;
             archStandard = "Complete US Governance + CoE Engine";
         }
 
@@ -409,11 +648,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (calcScopeSelect && calcScaleSelect) {
         calcScopeSelect.addEventListener('change', calculateTransformation);
         calcScaleSelect.addEventListener('change', calculateTransformation);
+        if (calcSeatsSlider) {
+            calcSeatsSlider.addEventListener('input', calculateTransformation);
+        }
         calculateTransformation();
     }
 
     // ----------------------------------------------------------------------
-    // 6. Operating Entity Filter / Toggle (Portal View)
+    // 7. Operating Entity Filter / Toggle (Portal View)
     // ----------------------------------------------------------------------
     const entityToggles = document.querySelectorAll('.entity-toggle-btn');
     const entityContentGroups = document.querySelectorAll('[data-entity-content]');
@@ -446,7 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 7. Contact & Executive Briefing Form Sanitization & Submission
+    // 8. Contact & Executive Briefing Form Sanitization & Submission
     // ----------------------------------------------------------------------
     const contactForm = document.getElementById('vellicorContactForm');
     const formSuccess = document.getElementById('formSuccess');

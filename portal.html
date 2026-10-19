@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Portal & CoE Console | Vellicor Technologies Ltd</title>
-    <meta name="description" content="Vellicor Technologies Ltd Enterprise Operating Portal — Dual-continent governance connecting US corporate parent holding and AnshuAI global engineering CoE.">
+    <title>Enterprise Operating Portal & CoE Console | Vellicor Technologies Ltd</title>
+    <meta name="description" content="Vellicor Technologies Ltd Enterprise Operating Portal — Dual-continent governance connecting US corporate parent holding and AnshuAI global engineering CoE. Live telemetry, topology, and velocity benchmarks.">
     
     <!-- Open Graph / Meta -->
-    <meta property="og:title" content="Enterprise Portal & CoE Console | Vellicor Technologies Ltd">
+    <meta property="og:title" content="Enterprise Operating Portal & CoE Console | Vellicor Technologies Ltd">
     <meta property="og:description" content="Dual-continent governance connecting US corporate parent holding and AnshuAI global engineering CoE. Velocity meets strong core.">
     <meta property="og:type" content="website">
 
@@ -51,7 +51,12 @@
     </script>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-deep text-slate-100 font-sans selection:bg-indigoPrimary/30 selection:text-white">
+<body class="bg-deep text-slate-100 font-sans selection:bg-indigoPrimary/30 selection:text-white relative overflow-x-hidden">
+
+    <!-- AMBIENT BACKGROUND GLOW LIGHTS -->
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-indigoPrimary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed top-1/3 right-10 w-[450px] h-[450px] bg-cyanPrimary/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-10 left-10 w-[550px] h-[550px] bg-anshuGold/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
 
     <!-- HEADER / STREAMLINED CAPSULE NAVIGATION -->
     <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
@@ -70,7 +75,7 @@
                 <a href="./subsidiaries.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-anshuGold hover:bg-white/[0.06] rounded-full transition whitespace-nowrap flex items-center">
                     <span class="inline-block w-1.5 h-1.5 rounded-full bg-anshuGold mr-1.5"></span>AnshuAI CoE
                 </a>
-                <a href="./portal.html" class="px-3 py-1.5 text-xs font-semibold text-cyanGlow bg-white/[0.08] border border-cyanPrimary/40 rounded-full transition whitespace-nowrap flex items-center">
+                <a href="./portal.html" class="px-3 py-1.5 text-xs font-semibold text-cyanGlow bg-white/[0.08] border border-cyanPrimary/40 rounded-full transition whitespace-nowrap flex items-center shadow-[0_0_15px_rgba(6,182,212,0.25)]">
                     <span class="inline-block w-1.5 h-1.5 rounded-full bg-cyanGlow mr-1.5 pulse-dot"></span>Portal
                 </a>
                 <a href="./contact.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.06] rounded-full transition whitespace-nowrap">Contact</a>
@@ -78,7 +83,7 @@
 
             <!-- Actions -->
             <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-                <a href="./contact.html" class="btn-indigo-solid px-4 sm:px-5 py-1.5 sm:py-2 text-xs uppercase tracking-wider flex items-center gap-2 whitespace-nowrap">
+                <a href="./contact.html" class="btn-indigo-solid px-4 sm:px-5 py-1.5 sm:py-2 text-xs uppercase tracking-wider flex items-center gap-2 whitespace-nowrap shimmer-trigger">
                     <span>Executive Briefing</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -116,75 +121,88 @@
     </header>
 
     <!-- PORTAL HERO & REAL-TIME OPERATING HUD -->
-    <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden border-b border-indigoPrimary/20">
+    <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden border-b border-indigoPrimary/20 bg-dot-matrix">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             
             <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div class="max-w-3xl space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-cyanPrimary/40 text-xs font-semibold text-cyanGlow shadow-lg">
+                    <div class="hud-pill text-cyanGlow border-cyanPrimary/40 shadow-[0_0_20px_rgba(6,182,212,0.15)]">
                         <span class="w-2 h-2 rounded-full bg-cyanGlow pulse-dot"></span>
-                        <span class="font-mono uppercase tracking-wider">Global Delivery Operating Console</span>
-                        <span class="text-slate-500">&bull;</span>
-                        <span class="text-white font-mono">Live Telemetry</span>
+                        <span class="font-mono tracking-wider">GLOBAL OPERATING CONSOLE</span>
+                        <span class="text-slate-500">•</span>
+                        <span class="text-emerald-400 font-mono">DUAL-CONTINENT ONLINE</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
                         Enterprise <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow via-white to-anshuGold">Operating Portal</span>
                     </h1>
 
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Orchestrating the dual forces of <strong>Vellicor</strong>: Combining <strong>velocity</strong> (rapid, continuous transformation) with a <strong>strong core</strong> (unshakeable US corporate governance and CSDM 4.0 architecture).
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                        Unifying the core philosophy of <strong>Vellicor</strong>: Rapid kinetic <strong>velocity</strong> (accelerated enterprise AI & ServiceNow delivery) anchored by an unshakeable <strong>strong core</strong> (US Delaware legal jurisdiction, Certified Technical Architect governance, and CSDM 4.0 data integrity).
                     </p>
                 </div>
 
                 <!-- Follow the Sun Dual-Continent Clocks -->
-                <div class="bg-surface/80 rounded-2xl p-4 sm:p-5 border border-indigoPrimary/30 shadow-2xl flex flex-col sm:flex-row gap-6 items-center">
-                    <div class="space-y-1 text-center sm:text-left">
+                <div class="bento-card p-5 sm:p-6 border border-indigoPrimary/30 shadow-2xl flex flex-col sm:flex-row gap-6 items-center flex-shrink-0">
+                    <!-- US HQ Clock -->
+                    <div class="space-y-1.5 text-center sm:text-left min-w-[210px]">
                         <div class="text-[10px] font-mono uppercase tracking-widest text-indigoGlow flex items-center justify-center sm:justify-start gap-1.5">
-                            <i class="fa-solid fa-flag-usa"></i> US Parent Holding (New York)
+                            <span class="w-2 h-2 rounded-full bg-indigoPrimary pulse-dot"></span>
+                            <i class="fa-solid fa-flag-usa"></i> US Parent (Delaware / NY)
                         </div>
-                        <div id="nyClock" class="text-xl sm:text-2xl font-mono font-extrabold text-white tracking-wide">--:--:-- --</div>
-                        <div id="nyDate" class="text-[11px] text-slate-400">EDT / Sovereign Governance</div>
+                        <div id="nyClock" class="text-2xl sm:text-3xl font-mono font-extrabold text-white tracking-wide">--:--:-- --</div>
+                        <div id="nyDate" class="text-[11px] text-slate-400 font-mono">EDT • Sovereign US Jurisdiction</div>
                     </div>
-                    <div class="hidden sm:block h-10 w-[1px] bg-indigoPrimary/30"></div>
-                    <div class="space-y-1 text-center sm:text-left">
+
+                    <div class="hidden sm:block h-12 w-[1px] bg-gradient-to-b from-transparent via-indigoPrimary/40 to-transparent"></div>
+
+                    <!-- Bangalore CoE Clock -->
+                    <div class="space-y-1.5 text-center sm:text-left min-w-[210px]">
                         <div class="text-[10px] font-mono uppercase tracking-widest text-anshuGold flex items-center justify-center sm:justify-start gap-1.5">
-                            <i class="fa-solid fa-gem"></i> APAC CoE Delivery (Bengaluru)
+                            <span class="w-2 h-2 rounded-full bg-anshuGold pulse-dot"></span>
+                            <i class="fa-solid fa-gem"></i> Engineering CoE (Bengaluru)
                         </div>
-                        <div id="blrClock" class="text-xl sm:text-2xl font-mono font-extrabold text-anshuGold tracking-wide">--:--:-- --</div>
-                        <div id="blrDate" class="text-[11px] text-slate-400">IST / 24/7 Follow-the-Sun Sprints</div>
+                        <div id="blrClock" class="text-2xl sm:text-3xl font-mono font-extrabold text-anshuGold tracking-wide">--:--:-- --</div>
+                        <div id="blrDate" class="text-[11px] text-slate-400 font-mono">IST • 24/7 Follow-the-Sun Sprints</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Global Status Bar -->
+            <!-- Global Status Bar / Bento HUD Counters -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div class="p-4 rounded-xl bg-surface/60 border border-white/10 flex items-center gap-3">
-                    <span class="w-3 h-3 rounded-full bg-emerald-400 pulse-dot flex-shrink-0"></span>
+                <div class="bento-card p-4 sm:p-5 flex items-center gap-3.5 bento-glow-indigo">
+                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-400 pulse-dot flex-shrink-0"></span>
                     <div>
-                        <div class="text-[11px] text-slate-400 font-mono">Contract Authority</div>
-                        <div class="text-xs font-bold text-white">United States MSA</div>
+                        <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Contract Authority</div>
+                        <div class="text-xs sm:text-sm font-bold text-white font-heading">United States MSA</div>
+                        <div class="text-[10px] text-emerald-400/80">Delaware Law Enforceable</div>
                     </div>
                 </div>
-                <div class="p-4 rounded-xl bg-surface/60 border border-white/10 flex items-center gap-3">
-                    <span class="w-3 h-3 rounded-full bg-cyanPrimary pulse-dot flex-shrink-0"></span>
+
+                <div class="bento-card p-4 sm:p-5 flex items-center gap-3.5 bento-glow-cyan">
+                    <span class="w-3.5 h-3.5 rounded-full bg-cyanPrimary pulse-dot flex-shrink-0"></span>
                     <div>
-                        <div class="text-[11px] text-slate-400 font-mono">Architectural Rigor</div>
-                        <div class="text-xs font-bold text-cyanGlow">ServiceNow CTA Led</div>
+                        <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Architectural Rigor</div>
+                        <div class="text-xs sm:text-sm font-bold text-cyanGlow font-heading">ServiceNow CTA Led</div>
+                        <div class="text-[10px] text-cyanGlow/80">100% Clean Core (CSDM 4.0)</div>
                     </div>
                 </div>
-                <div class="p-4 rounded-xl bg-surface/60 border border-white/10 flex items-center gap-3">
-                    <span class="w-3 h-3 rounded-full bg-anshuGold pulse-dot flex-shrink-0"></span>
+
+                <div class="bento-card p-4 sm:p-5 flex items-center gap-3.5 bento-glow-gold">
+                    <span class="w-3.5 h-3.5 rounded-full bg-anshuGold pulse-dot flex-shrink-0"></span>
                     <div>
-                        <div class="text-[11px] text-slate-400 font-mono">Engineering Velocity</div>
-                        <div class="text-xs font-bold text-anshuGold">8–12 Wk Delivery</div>
+                        <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Engineering Velocity</div>
+                        <div class="text-xs sm:text-sm font-bold text-anshuGold font-heading">8–12 Wk Delivery</div>
+                        <div class="text-[10px] text-anshuGold/80">vs 14–18 Mo Legacy Big-4</div>
                     </div>
                 </div>
-                <div class="p-4 rounded-xl bg-surface/60 border border-white/10 flex items-center gap-3">
-                    <span class="w-3 h-3 rounded-full bg-indigoPrimary pulse-dot flex-shrink-0"></span>
+
+                <div class="bento-card p-4 sm:p-5 flex items-center gap-3.5 bento-glow-indigo">
+                    <span class="w-3.5 h-3.5 rounded-full bg-indigoPrimary pulse-dot flex-shrink-0"></span>
                     <div>
-                        <div class="text-[11px] text-slate-400 font-mono">Data Sovereignty</div>
-                        <div class="text-xs font-bold text-indigoGlow">Air-Gapped Private VPC</div>
+                        <div class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Data Sovereignty</div>
+                        <div class="text-xs sm:text-sm font-bold text-indigoGlow font-heading">Air-Gapped VPC</div>
+                        <div class="text-[10px] text-indigoGlow/80">Zero Data Retention SLA</div>
                     </div>
                 </div>
             </div>
@@ -192,19 +210,106 @@
         </div>
     </section>
 
-    <!-- PARENT-SUBSIDIARY OPERATING MODEL SIMULATOR (CORE FEATURE) -->
+    <!-- SECTION 1: INTERACTIVE DUAL-CONTINENT ARCHITECTURE TOPOLOGY MAP -->
+    <section class="py-20 relative bg-surface/20 border-b border-indigoPrimary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="hud-pill text-indigoGlow border-indigoPrimary/30">
+                    <i class="fa-solid fa-network-wired text-indigoGlow"></i>
+                    <span>TOPOLOGY VISUALIZER</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Dual-Continent Operating Topology
+                </h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Click between nodes to inspect the unified infrastructure connecting North American executive oversight to specialized APAC Center of Excellence (CoE) delivery squads.
+                </p>
+            </div>
+
+            <!-- Interactive Topology Canvas -->
+            <div class="bento-card p-6 sm:p-8 bg-surface/80 border border-indigoPrimary/40 space-y-8">
+                
+                <!-- Topology Node Selector Buttons -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- Node 1: US Parent -->
+                    <button id="topologyBtnUS" class="topology-node active text-left p-5 rounded-2xl border border-indigoPrimary/40 bg-surface/90 hover:border-indigoPrimary transition-all space-y-3" data-topology-target="us">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-indigoPrimary/20 text-indigoGlow border border-indigoPrimary/30">
+                                NODE 01 • US PARENT
+                            </span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+                        </div>
+                        <div>
+                            <div class="text-base font-bold text-white font-heading">Vellicor Technologies Ltd</div>
+                            <div class="text-xs text-slate-400">Delaware Holding • Executive Governance</div>
+                        </div>
+                        <div class="text-[11px] text-indigoGlow/90 font-mono">
+                            • Delaware MSA &bull; SOC2 / HIPAA &bull; CTA Review
+                        </div>
+                    </button>
+
+                    <!-- Node 2: Transit Bridge -->
+                    <button id="topologyBtnBridge" class="topology-node text-left p-5 rounded-2xl border border-white/10 bg-surface/50 hover:border-cyanPrimary/40 transition-all space-y-3" data-topology-target="bridge">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-cyanPrimary/20 text-cyanGlow border border-cyanPrimary/30">
+                                NODE 02 • TRANSIT PIPE
+                            </span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyanGlow pulse-dot"></span>
+                        </div>
+                        <div>
+                            <div class="text-base font-bold text-white font-heading">Sovereign Air-Gapped Bridge</div>
+                            <div class="text-xs text-slate-400">Encrypted VPC Tunnel • 182ms Transcontinental</div>
+                        </div>
+                        <div class="text-[11px] text-cyanGlow/90 font-mono">
+                            • mTLS 1.3 &bull; Zero Egress Leaks &bull; 24/7 CI/CD
+                        </div>
+                    </button>
+
+                    <!-- Node 3: APAC CoE -->
+                    <button id="topologyBtnAPAC" class="topology-node topology-node-gold text-left p-5 rounded-2xl border border-white/10 bg-surface/50 hover:border-anshuGold/40 transition-all space-y-3" data-topology-target="apac">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-anshuGold/20 text-anshuGold border border-anshuGold/30">
+                                NODE 03 • APAC COE
+                            </span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-anshuGold pulse-dot"></span>
+                        </div>
+                        <div>
+                            <div class="text-base font-bold text-white font-heading">AnshuAI Technologies Pvt. Ltd.</div>
+                            <div class="text-xs text-slate-400">Bengaluru CoE • Delivery Engine</div>
+                        </div>
+                        <div class="text-[11px] text-anshuGold/90 font-mono">
+                            • Sub-400ms Voice &bull; ServiceNow Sprints &bull; 24/7 SRE
+                        </div>
+                    </button>
+
+                </div>
+
+                <!-- Dynamic Node Detail View -->
+                <div id="topologyDetailPanel" class="p-6 sm:p-8 rounded-2xl bg-deep/90 border border-indigoPrimary/30 space-y-6">
+                    <!-- Populated dynamically via script.js -->
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: PARENT-SUBSIDIARY LIFECYCLE SIMULATOR (CORE FEATURE) -->
     <section class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigoGlow">
-                    <i class="fa-solid fa-network-wired"></i> Dual Operating System Architecture
+                <div class="hud-pill text-cyanGlow border-cyanPrimary/30">
+                    <i class="fa-solid fa-arrows-spin text-cyanGlow"></i>
+                    <span>EXECUTION LIFECYCLE</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-                    Interactive Parent-Subsidiary Lifecycle
+                    4-Stage Engagement Architecture
                 </h2>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Explore how institutional enterprise engagements transition seamlessly from US executive governance to rapid 24/7 APAC engineering sprints with guaranteed production velocity.
+                    How institutional engagements transition seamlessly from North American executive governance to rapid 24/7 APAC engineering sprints with guaranteed production velocity.
                 </p>
             </div>
 
@@ -248,20 +353,20 @@
             </div>
 
             <!-- Dynamic Stage Inspector Display -->
-            <div id="stageDisplay" class="theme-card rounded-3xl p-6 sm:p-10 border border-indigoPrimary/40 shadow-2xl">
+            <div id="stageDisplay" class="bento-card p-6 sm:p-10 border border-indigoPrimary/40 shadow-2xl">
                 <!-- Dynamically populated via script.js -->
             </div>
 
         </div>
     </section>
 
-    <!-- ENTITY TOGGLE & DIRECTORY -->
-    <section class="py-16 bg-surface/30 border-y border-indigoPrimary/20">
+    <!-- SECTION 3: DUAL-ENTITY CAPABILITIES DIRECTORY -->
+    <section class="py-20 bg-surface/30 border-y border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-anshuGold">Corporate Registry & Capabilities</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white mt-1">Dual-Entity Operating Directory</h2>
+                    <span class="text-xs font-bold uppercase tracking-widest text-anshuGold font-mono">Corporate Registry & Capabilities</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white mt-1">Dual-Entity Operating Directory</h2>
                 </div>
                 
                 <!-- Filter Pills -->
@@ -280,43 +385,43 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Entity 1: Vellicor Technologies Ltd -->
-                <div class="theme-card rounded-3xl p-8 space-y-6 flex flex-col justify-between" data-entity-content="vellicor">
+                <div class="bento-card p-8 space-y-6 flex flex-col justify-between bento-glow-indigo" data-entity-content="vellicor">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-indigoPrimary/20 text-indigoGlow border border-indigoPrimary/40">
                                 Designated US Parent Holding
                             </span>
-                            <span class="text-xs text-slate-400 font-mono">Incorporated: United States</span>
+                            <span class="text-xs text-slate-400 font-mono">Incorporated: Delaware, USA</span>
                         </div>
                         <h3 class="text-2xl font-extrabold text-white font-heading">Vellicor Technologies Ltd</h3>
                         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
                             Serving as the institutional parent corporation, Vellicor holds strategic executive advisory, master client contracts under US legal jurisdiction, corporate patent portfolios, and ServiceNow Certified Technical Architect (CTA) governance.
                         </p>
-                        <div class="space-y-2 pt-2 text-xs">
-                            <div class="flex items-center gap-2 text-slate-300">
+                        <div class="space-y-2.5 pt-2 text-xs">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-indigoGlow"></i>
-                                <span>Direct North American MSA contracting with Delaware/US jurisdiction.</span>
+                                <span>Direct North American MSA contracting under United States law.</span>
                             </div>
-                            <div class="flex items-center gap-2 text-slate-300">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-indigoGlow"></i>
                                 <span>CSDM 4.0 and domain separation validation by Certified Technical Architects.</span>
                             </div>
-                            <div class="flex items-center gap-2 text-slate-300">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-indigoGlow"></i>
                                 <span>SOC2 Type II, HIPAA, and NIST 800-53 sovereign security oversight.</span>
                             </div>
                         </div>
                     </div>
-                    <div class="pt-4 border-t border-indigoPrimary/20 flex items-center justify-between">
-                        <div class="text-[11px] font-mono text-indigoGlow">Role: Institutional Stability & Core Governance</div>
-                        <a href="./about.html" class="text-xs font-bold text-white hover:text-indigoGlow flex items-center gap-1">
+                    <div class="pt-5 border-t border-indigoPrimary/20 flex items-center justify-between">
+                        <div class="text-[11px] font-mono text-indigoGlow">Institutional Stability & Legal Governance</div>
+                        <a href="./about.html" class="text-xs font-bold text-white hover:text-indigoGlow flex items-center gap-1.5 transition">
                             <span>Governance Details</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Entity 2: AnshuAI Technologies Pvt. Ltd. -->
-                <div class="subsidiary-card rounded-3xl p-8 space-y-6 flex flex-col justify-between" data-entity-content="anshuai">
+                <div class="bento-card p-8 space-y-6 flex flex-col justify-between bento-glow-gold" data-entity-content="anshuai">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-anshuGold/20 text-anshuGold border border-anshuGold/40">
@@ -328,24 +433,24 @@
                         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
                             Serving as the primary global delivery arm and Center of Excellence (CoE), AnshuAI houses specialized engineering squads delivering high-velocity ServiceNow platform deployments, autonomous voice telephony engines, and pre-built industry accelerators.
                         </p>
-                        <div class="space-y-2 pt-2 text-xs">
-                            <div class="flex items-center gap-2 text-slate-300">
+                        <div class="space-y-2.5 pt-2 text-xs">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-anshuGold"></i>
                                 <span>Guaranteed 8–12 week production velocity with HeadStart accelerators.</span>
                             </div>
-                            <div class="flex items-center gap-2 text-slate-300">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-anshuGold"></i>
                                 <span>Sub-400ms conversational full-duplex voice telephony engines.</span>
                             </div>
-                            <div class="flex items-center gap-2 text-slate-300">
+                            <div class="flex items-center gap-2.5 text-slate-300">
                                 <i class="fa-solid fa-circle-check text-anshuGold"></i>
-                                <span>24/7 Follow-the-Sun continuous engineering sprints and L1/L2 auto-remediation.</span>
+                                <span>24/7 Follow-the-Sun continuous engineering sprints & L1/L2 remediation.</span>
                             </div>
                         </div>
                     </div>
-                    <div class="pt-4 border-t border-anshuGold/20 flex items-center justify-between">
-                        <div class="text-[11px] font-mono text-anshuGold">Role: Engineering Velocity & Specialized CoE Execution</div>
-                        <a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-anshuGold hover:underline flex items-center gap-1">
+                    <div class="pt-5 border-t border-anshuGold/20 flex items-center justify-between">
+                        <div class="text-[11px] font-mono text-anshuGold">Engineering Velocity & Specialized CoE Execution</div>
+                        <a href="https://anshuai.in" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-anshuGold hover:underline flex items-center gap-1.5 transition">
                             <span>Visit anshuai.in</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </a>
                     </div>
@@ -355,13 +460,17 @@
         </div>
     </section>
 
-    <!-- INTERACTIVE TELEMETRY LAB: VOICE ENGINE SUB-400MS TESTER -->
+    <!-- SECTION 4: INTERACTIVE TELEMETRY LAB — VOICE ENGINE SUB-400MS BENCHMARK -->
     <section class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 space-y-5">
-                    <span class="text-xs font-bold uppercase tracking-widest text-cyanGlow">Engineering CoE Telemetry</span>
+                    <div class="hud-pill text-cyanGlow border-cyanPrimary/40">
+                        <i class="fa-solid fa-wave-square text-cyanGlow"></i>
+                        <span>VOICE ENGINE TELEMETRY</span>
+                    </div>
+
                     <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                         Sub-400ms Voice Telephony Benchmark
                     </h2>
@@ -369,23 +478,24 @@
                         Human conversational comfort requires turn-taking latency below 450ms. AnshuAI's voice engineering team achieves an industry-leading sub-400ms round-trip benchmark utilizing edge-compiled streaming ASR, sovereign reasoning microservices, and neural speech synthesis.
                     </p>
 
+                    <!-- Latency Milestones -->
                     <div class="space-y-3 pt-2">
-                        <div class="flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-cyanPrimary/20 text-cyanGlow flex items-center justify-center font-mono text-xs font-bold">48ms</span>
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
+                            <span class="w-12 h-9 rounded-lg bg-cyanPrimary/20 text-cyanGlow flex items-center justify-center font-mono text-xs font-bold">48ms</span>
                             <div class="text-xs text-slate-300">SIP trunk buffer & voice activity detection (VAD).</div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-indigoPrimary/20 text-indigoGlow flex items-center justify-center font-mono text-xs font-bold">145ms</span>
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
+                            <span class="w-12 h-9 rounded-lg bg-indigoPrimary/20 text-indigoGlow flex items-center justify-center font-mono text-xs font-bold">145ms</span>
                             <div class="text-xs text-slate-300">Air-gapped SLM domain intent extraction & context mapping.</div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <span class="w-8 h-8 rounded-lg bg-anshuGold/20 text-anshuGold flex items-center justify-center font-mono text-xs font-bold">104ms</span>
+                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
+                            <span class="w-12 h-9 rounded-lg bg-anshuGold/20 text-anshuGold flex items-center justify-center font-mono text-xs font-bold">104ms</span>
                             <div class="text-xs text-slate-300">Neural audio stream packet dispatch over enterprise WebRTC.</div>
                         </div>
                     </div>
 
-                    <div class="pt-2">
-                        <button id="voiceSimulateBtn" class="btn-cyan-pill px-6 py-3 text-xs uppercase tracking-wider flex items-center gap-2">
+                    <div class="pt-3">
+                        <button id="voiceSimulateBtn" class="btn-cyan-pill px-6 py-3.5 text-xs uppercase tracking-wider flex items-center gap-2.5 font-bold shadow-[0_0_25px_rgba(6,182,212,0.25)] shimmer-trigger">
                             <i class="fa-solid fa-play"></i>
                             <span>Run Voice Telemetry Benchmark</span>
                         </button>
@@ -393,24 +503,32 @@
                 </div>
 
                 <div class="lg:col-span-7">
-                    <div class="telemetry-screen rounded-3xl p-6 sm:p-8 space-y-6">
-                        <div class="flex items-center justify-between pb-4 border-b border-indigoPrimary/30">
+                    <div class="telemetry-screen rounded-3xl p-6 sm:p-8 space-y-6 border border-indigoPrimary/40">
+                        <div class="flex flex-wrap items-center justify-between pb-4 border-b border-indigoPrimary/30 gap-3">
                             <div class="flex items-center gap-2 text-xs text-slate-400">
                                 <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
                                 <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
                                 <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                                <span class="ml-2 font-mono">telemetry://voice-engine.coe.vellicortech.internal</span>
+                                <span class="ml-2 font-mono text-[11px]">telemetry://voice-engine.coe.vellicortech.internal</span>
                             </div>
-                            <span class="px-2.5 py-1 rounded bg-indigoPrimary/20 text-indigoGlow text-[10px] font-mono">ACTIVE CHANNEL</span>
+
+                            <!-- Inspector Tab Switcher -->
+                            <div class="inline-flex items-center p-0.5 rounded-lg bg-deep border border-white/10 text-[10px] font-mono">
+                                <button id="logTabBtn" class="px-2.5 py-1 rounded bg-indigoPrimary/20 text-cyanGlow font-bold">CONSOLE</button>
+                                <button id="packetTabBtn" class="px-2.5 py-1 rounded text-slate-400 hover:text-white">PACKET JSON</button>
+                            </div>
                         </div>
 
                         <!-- Waveform Graphic -->
                         <div class="space-y-2">
-                            <div class="text-[11px] text-slate-400 uppercase tracking-wider flex justify-between">
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider flex justify-between font-mono">
                                 <span>Neural Audio Stream</span>
-                                <span class="text-cyanGlow">Sampling 48kHz / Opus</span>
+                                <span class="text-cyanGlow">Sampling 48kHz / Opus Duplex</span>
                             </div>
-                            <div id="waveformContainer" class="h-12 bg-deep/80 rounded-xl border border-white/10 flex items-center justify-center gap-1.5 px-4 opacity-40 transition-opacity duration-300">
+                            <div id="waveformContainer" class="h-14 bg-deep/80 rounded-xl border border-white/10 flex items-center justify-center gap-1.5 px-4 opacity-40 transition-opacity duration-300">
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
                                 <div class="waveform-bar"></div>
                                 <div class="waveform-bar"></div>
                                 <div class="waveform-bar"></div>
@@ -432,20 +550,38 @@
                         <!-- Latency Counter Display -->
                         <div class="grid grid-cols-2 gap-4">
                             <div class="p-4 rounded-xl bg-deep/90 border border-white/5 space-y-1">
-                                <div class="text-[10px] text-slate-400 uppercase tracking-widest">Turn-Taking Latency</div>
-                                <div id="voiceLatencyValue" class="text-3xl font-bold font-mono text-emerald-400">362 ms</div>
-                                <div class="text-[10px] text-emerald-400/80">&bull; Certified Under 400ms SLA</div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-mono">Turn-Taking Latency</div>
+                                <div id="voiceLatencyValue" class="text-3xl sm:text-4xl font-bold font-mono text-emerald-400">362 ms</div>
+                                <div class="text-[10px] text-emerald-400/80 font-mono">• Certified Under 400ms SLA</div>
                             </div>
                             <div class="p-4 rounded-xl bg-deep/90 border border-white/5 space-y-1">
-                                <div class="text-[10px] text-slate-400 uppercase tracking-widest">Protocol Standard</div>
-                                <div class="text-2xl font-bold font-mono text-cyanGlow">SIP / WebRTC</div>
-                                <div class="text-[10px] text-slate-400">&bull; Full-Duplex Barge-In Ready</div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-mono">Protocol Standard</div>
+                                <div class="text-2xl sm:text-3xl font-bold font-mono text-cyanGlow">SIP / WebRTC</div>
+                                <div class="text-[10px] text-slate-400 font-mono">• Full-Duplex Barge-In Ready</div>
                             </div>
                         </div>
 
-                        <!-- Real-time Log Output -->
-                        <div id="voiceLogOutput" class="h-32 bg-deep/95 rounded-xl p-3 border border-white/5 overflow-y-auto space-y-1 text-[11px] text-slate-400 leading-tight">
+                        <!-- Real-time Log Output View -->
+                        <div id="voiceLogOutput" class="h-32 bg-deep/95 rounded-xl p-3 border border-white/5 overflow-y-auto space-y-1 text-[11px] text-slate-400 leading-tight font-mono">
                             <div class="text-slate-500">&gt; Engine standing by. Click "Run Voice Telemetry Benchmark" to sample real-time duplex turn latency...</div>
+                        </div>
+
+                        <!-- Packet Inspector View (Initially Hidden) -->
+                        <div id="voicePacketView" class="hidden h-32 bg-deep/95 rounded-xl p-3 border border-white/5 overflow-y-auto space-y-1 text-[11px] text-cyanGlow/90 leading-tight font-mono">
+                            <pre class="text-[10px] text-slate-300">{
+  "telemetry": "duplex_turn",
+  "client_ip": "10.240.0.12 (VPC Private)",
+  "vad_timestamp": 1729340000048,
+  "vad_ms": 48,
+  "streaming_asr_tokens": 14,
+  "asr_ms": 62,
+  "slm_intent": "SERVICENOW_INCIDENT_RESOLVE",
+  "slm_ms": 145,
+  "neural_tts_sample_rate": 48000,
+  "first_packet_burst_ms": 104,
+  "total_roundtrip_ms": 359,
+  "status": "SLA_COMPLIANT_SUB_400MS"
+}</pre>
                         </div>
                     </div>
                 </div>
@@ -454,24 +590,27 @@
         </div>
     </section>
 
-    <!-- TRANSFORMATION VELOCITY CALCULATOR -->
+    <!-- SECTION 5: TRANSFORMATION VELOCITY & ROI CALCULATOR -->
     <section class="py-20 bg-surface/40 border-t border-indigoPrimary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <div class="text-center space-y-3 max-w-3xl mx-auto">
-                <span class="text-xs font-bold uppercase tracking-widest text-anshuGold">Strategic Transformation Analysis</span>
+                <div class="hud-pill text-anshuGold border-anshuGold/30">
+                    <i class="fa-solid fa-calculator text-anshuGold"></i>
+                    <span>STRATEGIC IMPACT ANALYSIS</span>
+                </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                     Velocity & Core Impact Calculator
                 </h2>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Compare Vellicor's dual-continent model against traditional multi-tiered consultancy timelines.
+                    Compare Vellicor's dual-continent velocity model against traditional multi-tiered legacy consultancy timelines.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Controls -->
-                <div class="lg:col-span-5 theme-card rounded-3xl p-6 sm:p-8 space-y-6">
-                    <div class="space-y-4">
+                <!-- Controls Bento -->
+                <div class="lg:col-span-5 bento-card p-6 sm:p-8 space-y-6">
+                    <div class="space-y-5">
                         <div>
                             <label for="calcScopeSelect" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
                                 Modernization Scope
@@ -494,39 +633,48 @@
                                 <option value="fortune500">Global Institutional / Fortune 500 (25,000+ Users)</option>
                             </select>
                         </div>
+
+                        <!-- Interactive Range Slider for Organization Scale -->
+                        <div class="space-y-2 pt-1">
+                            <div class="flex justify-between text-xs font-mono">
+                                <span class="text-slate-400">ACTIVE LICENSES / SEATS:</span>
+                                <span id="calcSeatsDisplay" class="text-cyanGlow font-bold">12,500 Users</span>
+                            </div>
+                            <input type="range" id="calcSeatsSlider" min="1000" max="50000" step="500" value="12500" class="range-slider-modern">
+                        </div>
                     </div>
 
-                    <div class="p-4 rounded-xl bg-deep/60 border border-white/10 text-xs text-slate-300 space-y-2">
+                    <div class="p-4 rounded-xl bg-deep/80 border border-white/10 text-xs text-slate-300 space-y-2">
                         <div class="font-bold text-white flex items-center gap-2">
                             <i class="fa-solid fa-bolt text-anshuGold"></i> HeadStart Pre-Engineered IP
                         </div>
-                        <p class="text-slate-400 leading-relaxed">
-                            By deploying pre-configured industry blueprints and automated test suites, 80% of common architecture is pre-assembled before Day 1.
+                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                            By deploying pre-configured industry blueprints and automated test suites, 80% of common enterprise architecture is pre-assembled before Day 1.
                         </p>
                     </div>
                 </div>
 
-                <!-- Outputs -->
+                <!-- Outputs Bento Grid -->
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="theme-card rounded-2xl p-6 space-y-2 border-indigoPrimary/60 bg-surface/90">
+                    <div class="bento-card p-6 space-y-2 border-indigoPrimary/60 bg-surface/90 bento-glow-indigo">
                         <div class="text-[11px] font-mono text-indigoGlow uppercase tracking-wider">Vellicor Delivery Velocity</div>
                         <div id="calcVellicorTime" class="text-3xl sm:text-4xl font-extrabold text-white font-heading">8–12 Weeks</div>
                         <div class="text-xs text-slate-400">Guaranteed production go-live under US MSA.</div>
                     </div>
 
-                    <div class="theme-card rounded-2xl p-6 space-y-2 border-white/10 bg-surface/40">
+                    <div class="bento-card p-6 space-y-2 border-white/10 bg-surface/40">
                         <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Legacy Big-4 Timeline</div>
                         <div id="calcTraditionalTime" class="text-3xl sm:text-4xl font-extrabold text-slate-400 font-heading">14–18 Months</div>
                         <div class="text-xs text-slate-500">Riddled with change orders & discovery voids.</div>
                     </div>
 
-                    <div class="theme-card rounded-2xl p-6 space-y-2 border-anshuGold/40 bg-surface/80">
+                    <div class="bento-card p-6 space-y-2 border-anshuGold/40 bg-surface/80 bento-glow-gold">
                         <div class="text-[11px] font-mono text-anshuGold uppercase tracking-wider">Estimated TCO Advantage</div>
                         <div id="calcCostSavings" class="text-2xl sm:text-3xl font-extrabold text-anshuGold font-heading">60% TCO Savings</div>
                         <div class="text-xs text-slate-400">Elimination of junior bench & endless billable hours.</div>
                     </div>
 
-                    <div class="theme-card rounded-2xl p-6 space-y-2 border-cyanPrimary/40 bg-surface/80">
+                    <div class="bento-card p-6 space-y-2 border-cyanPrimary/40 bg-surface/80 bento-glow-cyan">
                         <div class="text-[11px] font-mono text-cyanGlow uppercase tracking-wider">Architectural Integrity</div>
                         <div id="calcArchitectureScore" class="text-base sm:text-lg font-bold text-white font-heading">CSDM 4.0 Clean Core & Zero Debt</div>
                         <div class="text-xs text-slate-400">Top 1% Certified Technical Architect oversight.</div>
@@ -537,18 +685,98 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION / BRIEFING INTAKE -->
+    <!-- SECTION 6: SOVEREIGN SECURITY & COMPLIANCE VAULT (NEW BENTO SECTION) -->
+    <section class="py-20 relative bg-surface/20 border-t border-indigoPrimary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="hud-pill text-emerald-400 border-emerald-400/30">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                    <span>SOVEREIGN VAULT</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Institutional Governance & Compliance Vault
+                </h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Designed for defense, healthcare, and financial services institutions requiring air-tight regulatory isolation and auditability.
+                </p>
+            </div>
+
+            <!-- Bento Compliance Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bento-card p-6 space-y-4 border-white/10 hover:border-indigoPrimary/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-indigoPrimary/20 border border-indigoPrimary/40 flex items-center justify-center text-indigoGlow text-xl">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">SOC 2 Type II Certified</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Rigorous annual audits validating Security, Availability, and Confidentiality across all Vellicor US and AnshuAI development environments.
+                    </p>
+                    <div class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-circle"></i> Continuous Automated Audit
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 space-y-4 border-white/10 hover:border-cyanPrimary/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-cyanPrimary/20 border border-cyanPrimary/40 flex items-center justify-center text-cyanGlow text-xl">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">HIPAA FHIR Compliance</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Zero Protected Health Information (PHI) retention. Automated token de-identification before model inference with BAA guarantees.
+                    </p>
+                    <div class="text-[11px] font-mono text-cyanGlow flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-circle"></i> BAA Contract Protected
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 space-y-4 border-white/10 hover:border-anshuGold/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-anshuGold/20 border border-anshuGold/40 flex items-center justify-center text-anshuGold text-xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">CSDM 4.0 Clean Core</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        ServiceNow Certified Technical Architect (CTA) governance enforcing zero customization debt and standard out-of-the-box upgradability.
+                    </p>
+                    <div class="text-[11px] font-mono text-anshuGold flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-circle"></i> CTA Architecture Signoff
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 space-y-4 border-white/10 hover:border-emerald-400/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">Air-Gapped Private VPC</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Deployments isolated inside client-controlled VPCs (AWS GovCloud, Azure Sovereign). Neural weights and fine-tuning datasets remain client property.
+                    </p>
+                    <div class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-check-circle"></i> Zero External Egress
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: CALL TO ACTION / BRIEFING INTAKE -->
     <section class="py-20 relative bg-surface/30 border-t border-indigoPrimary/25">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <span class="text-xs font-bold uppercase tracking-widest text-indigoGlow">Direct Engagement</span>
+            <div class="hud-pill text-indigoGlow border-indigoPrimary/30">
+                <i class="fa-solid fa-handshake text-indigoGlow"></i>
+                <span>DIRECT ENGAGEMENT</span>
+            </div>
             <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
                 Initiate Executive Transformation Briefing
             </h2>
             <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Connect directly with Vellicor's US executive architects and AnshuAI's engineering leads to evaluate your enterprise platform roadmap.
+                Connect directly with Vellicor's US executive architects and AnshuAI's engineering leadership to evaluate your enterprise platform roadmap under US legal confidentiality.
             </p>
             <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="./contact.html" class="btn-indigo-solid px-8 py-3.5 text-xs uppercase tracking-wider">
+                <a href="./contact.html" class="btn-indigo-solid px-8 py-3.5 text-xs uppercase tracking-wider shimmer-trigger">
                     Schedule Executive Briefing
                 </a>
                 <a href="./subsidiaries.html" class="btn-indigo-pill px-7 py-3.5 text-xs font-semibold">
@@ -563,12 +791,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
                 <div class="lg:col-span-2 space-y-4">
-                    <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-9 w-auto">
+                    <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-8 w-auto">
                     <p class="text-slate-400 leading-relaxed max-w-sm">
                         Vellicor Technologies Ltd is a US enterprise technology holding company providing governance, sovereign AI systems, and platform modernization across North America and global markets.
                     </p>
                     <div class="text-[11px] text-indigoGlow">
-                        Corporate Headquarters: <strong>United States</strong> &bull; Operating Subsidiary: <strong>AnshuAI Technologies Pvt. Ltd.</strong>
+                        Corporate Headquarters: <strong>United States</strong> • Operating Subsidiary: <strong>AnshuAI Technologies Pvt. Ltd.</strong>
                     </div>
                 </div>
 
