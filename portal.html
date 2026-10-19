@@ -168,6 +168,95 @@
                 </div>
             </div>
 
+            <!-- GRAPHICAL ELEMENT 1: TRANSCONTINENTAL ORBITAL ROUTE & LIVE DATA RELAY -->
+            <div class="bento-card p-5 sm:p-7 border border-indigoPrimary/30 relative overflow-hidden bg-surface/60">
+                <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                        <span class="uppercase tracking-wider text-slate-300 font-bold">Transcontinental Fiber Trunk</span>
+                        <span class="text-slate-600">•</span>
+                        <span class="text-indigoGlow">Delaware, USA ⟷ Bengaluru, India</span>
+                    </div>
+                    <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-cyanPrimary/10 text-cyanGlow border border-cyanPrimary/30">
+                        mTLS 1.3 SOVEREIGN ENCLAVE
+                    </span>
+                </div>
+
+                <svg viewBox="0 0 900 240" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="heroGlobeGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#0E2147" stop-opacity="0.8"/>
+                            <stop offset="100%" stop-color="#060B14" stop-opacity="0"/>
+                        </radialGradient>
+                        <linearGradient id="heroArcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#6366F1"/>
+                            <stop offset="50%" stop-color="#22D3EE"/>
+                            <stop offset="100%" stop-color="#D4AF37"/>
+                        </linearGradient>
+                        <filter id="heroGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                            <feMerge>
+                                <feMergeNode in="blur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Globe Silhouette & Latitude Rings -->
+                    <circle cx="450" cy="140" r="130" fill="url(#heroGlobeGlow)" />
+                    <circle cx="450" cy="140" r="130" fill="none" stroke="rgba(99,102,241,0.15)" stroke-width="1" stroke-dasharray="4 4" />
+                    <circle cx="450" cy="140" r="90" fill="none" stroke="rgba(6,182,212,0.12)" stroke-width="1" />
+                    <path d="M 350 140 Q 450 100 550 140" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                    <path d="M 350 140 Q 450 180 550 140" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                    <line x1="450" y1="10" x2="450" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="3 3"/>
+
+                    <!-- Curving Transcontinental Kinetic Arc -->
+                    <path id="transcontinentalArc" d="M 160 170 C 280 20, 620 20, 740 170" fill="none" stroke="url(#heroArcGradient)" stroke-width="3" filter="url(#heroGlowFilter)" stroke-linecap="round" />
+                    <path d="M 160 170 C 280 20, 620 20, 740 170" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.35" stroke-dasharray="6 6" class="pulse-line" />
+
+                    <!-- Node 1: US Parent (Delaware) -->
+                    <g transform="translate(160, 170)">
+                        <circle r="20" fill="#0B132B" stroke="#6366F1" stroke-width="2" />
+                        <circle r="7" fill="#6366F1" />
+                        <circle r="12" fill="none" stroke="#818CF8" stroke-width="1" opacity="0.6">
+                            <animate attributeName="r" values="7;22" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="38" text-anchor="middle" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">US PARENT (DELAWARE)</text>
+                        <text y="50" text-anchor="middle" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="9">US Law Enforceable MSA</text>
+                    </g>
+
+                    <!-- Center Apex Relay Badge -->
+                    <g transform="translate(450, 70)">
+                        <rect x="-65" y="-13" width="130" height="26" rx="13" fill="#060B14" stroke="#22D3EE" stroke-width="1.5" />
+                        <circle cx="-45" cy="0" r="3.5" fill="#22D3EE" />
+                        <text x="5" y="4" text-anchor="middle" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="9.5">182ms FIBER PING</text>
+                    </g>
+
+                    <!-- Node 2: APAC CoE (Bengaluru) -->
+                    <g transform="translate(740, 170)">
+                        <circle r="20" fill="#0B132B" stroke="#D4AF37" stroke-width="2" />
+                        <circle r="7" fill="#D4AF37" />
+                        <circle r="12" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.6">
+                            <animate attributeName="r" values="7;22" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="38" text-anchor="middle" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">APAC CoE (BENGALURU)</text>
+                        <text y="50" text-anchor="middle" fill="#D4AF37" font-family="'JetBrains Mono', monospace" font-size="9">AnshuAI Engineering Center</text>
+                    </g>
+
+                    <!-- Animated Data Packet (Forward: US -> Bengaluru) -->
+                    <circle r="4.5" fill="#22D3EE" class="packet-glow">
+                        <animateMotion path="M 160 170 C 280 20, 620 20, 740 170" dur="3s" repeatCount="indefinite" />
+                    </circle>
+
+                    <!-- Animated Data Packet (Reverse: Bengaluru -> US) -->
+                    <circle r="4" fill="#D4AF37" class="packet-glow-gold">
+                        <animateMotion path="M 740 170 C 620 20, 280 20, 160 170" dur="3.6s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
+            </div>
+
             <!-- Global Status Bar / Bento HUD Counters -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 <div class="bento-card p-4 sm:p-5 flex items-center gap-3.5 bento-glow-indigo">
@@ -246,7 +335,7 @@
                             <div class="text-xs text-slate-400">Delaware Holding • Executive Governance</div>
                         </div>
                         <div class="text-[11px] text-indigoGlow/90 font-mono">
-                            • Delaware MSA &bull; SOC2 / HIPAA &bull; CTA Review
+                            • Delaware MSA • SOC2 / HIPAA • CTA Review
                         </div>
                     </button>
 
@@ -263,7 +352,7 @@
                             <div class="text-xs text-slate-400">Encrypted VPC Tunnel • 182ms Transcontinental</div>
                         </div>
                         <div class="text-[11px] text-cyanGlow/90 font-mono">
-                            • mTLS 1.3 &bull; Zero Egress Leaks &bull; 24/7 CI/CD
+                            • mTLS 1.3 • Zero Egress Leaks • 24/7 CI/CD
                         </div>
                     </button>
 
@@ -280,10 +369,64 @@
                             <div class="text-xs text-slate-400">Bengaluru CoE • Delivery Engine</div>
                         </div>
                         <div class="text-[11px] text-anshuGold/90 font-mono">
-                            • Sub-400ms Voice &bull; ServiceNow Sprints &bull; 24/7 SRE
+                            • Sub-400ms Voice • ServiceNow Sprints • 24/7 SRE
                         </div>
                     </button>
 
+                </div>
+
+                <!-- GRAPHICAL ELEMENT 2: INTERACTIVE CIRCUIT ARCHITECTURE SCHEMATIC -->
+                <div class="p-4 sm:p-6 rounded-2xl bg-deep/95 border border-indigoPrimary/30 overflow-hidden">
+                    <div class="flex items-center justify-between pb-3 mb-2 border-b border-indigoPrimary/20">
+                        <div class="flex items-center gap-2 text-xs font-mono text-slate-300">
+                            <i class="fa-solid fa-microchip text-cyanGlow"></i>
+                            <span class="font-bold">SYSTEM TOPOLOGY SCHEMATIC</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-emerald-400">• CRYPTOGRAPHIC CIRCUIT VERIFIED</span>
+                    </div>
+
+                    <svg viewBox="0 0 900 210" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Circuit trace pathways -->
+                        <path d="M 100 105 L 260 105 L 300 75 L 390 75" stroke="rgba(99,102,241,0.5)" stroke-width="2" fill="none"/>
+                        <path d="M 100 105 L 260 105 L 300 135 L 390 135" stroke="rgba(99,102,241,0.5)" stroke-width="2" fill="none"/>
+                        
+                        <path d="M 510 75 L 600 75 L 640 105 L 800 105" stroke="rgba(212,175,55,0.5)" stroke-width="2" fill="none"/>
+                        <path d="M 510 135 L 600 135 L 640 105 L 800 105" stroke="rgba(212,175,55,0.5)" stroke-width="2" fill="none"/>
+
+                        <!-- Central Secure Enclave / Cryptographic Vault -->
+                        <rect x="390" y="45" width="120" height="120" rx="14" fill="#0B132B" stroke="#22D3EE" stroke-width="2" filter="url(#heroGlowFilter)"/>
+                        <circle cx="450" cy="78" r="16" fill="rgba(34,211,238,0.15)"/>
+                        <text x="450" y="84" text-anchor="middle" fill="#22D3EE" font-family="'Font Awesome 6 Free', sans-serif" font-weight="900" font-size="16">🛡️</text>
+                        <text x="450" y="112" text-anchor="middle" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">mTLS 1.3</text>
+                        <text x="450" y="128" text-anchor="middle" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="8.5">AIR-GAPPED</text>
+                        <text x="450" y="142" text-anchor="middle" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="8">ZERO EGRESS</text>
+
+                        <!-- Left: US Node Cluster -->
+                        <g transform="translate(60, 65)">
+                            <rect width="200" height="80" rx="10" fill="#0B132B" stroke="#6366F1" stroke-width="1.5"/>
+                            <circle cx="20" cy="24" r="5" fill="#6366F1"/>
+                            <text x="35" y="28" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="11.5">US PARENT CLUSTER</text>
+                            <text x="20" y="48" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">• Delaware MSA Legal Shell</text>
+                            <text x="20" y="62" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">• ServiceNow CTA Clean Core</text>
+                        </g>
+
+                        <!-- Right: Bangalore CoE Cluster -->
+                        <g transform="translate(640, 65)">
+                            <rect width="200" height="80" rx="10" fill="#0B132B" stroke="#D4AF37" stroke-width="1.5"/>
+                            <circle cx="20" cy="24" r="5" fill="#D4AF37"/>
+                            <text x="35" y="28" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="11.5">APAC CoE DELIVERY</text>
+                            <text x="20" y="48" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">• Sub-400ms Voice Telephony</text>
+                            <text x="20" y="62" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">• 24/7 Follow-the-Sun Sprints</text>
+                        </g>
+
+                        <!-- Moving Pulses Along Traces -->
+                        <circle r="3.5" fill="#6366F1" class="packet-glow-indigo">
+                            <animateMotion path="M 100 105 L 260 105 L 300 75 L 390 75" dur="2.2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="3.5" fill="#D4AF37" class="packet-glow-gold">
+                            <animateMotion path="M 510 135 L 600 135 L 640 105 L 800 105" dur="2.4s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
                 </div>
 
                 <!-- Dynamic Node Detail View -->
@@ -478,23 +621,67 @@
                         Human conversational comfort requires turn-taking latency below 450ms. AnshuAI's voice engineering team achieves an industry-leading sub-400ms round-trip benchmark utilizing edge-compiled streaming ASR, sovereign reasoning microservices, and neural speech synthesis.
                     </p>
 
-                    <!-- Latency Milestones -->
-                    <div class="space-y-3 pt-2">
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
-                            <span class="w-12 h-9 rounded-lg bg-cyanPrimary/20 text-cyanGlow flex items-center justify-center font-mono text-xs font-bold">48ms</span>
-                            <div class="text-xs text-slate-300">SIP trunk buffer & voice activity detection (VAD).</div>
+                    <!-- GRAPHICAL ELEMENT 3: SUB-400MS VOICE TELEPHONY STEP PIPELINE WITH VISUAL METERS -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <div class="p-3.5 rounded-xl bg-surface/70 border border-cyanPrimary/40 space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-cyanGlow font-bold">STAGE 01</span>
+                                <span class="px-2 py-0.5 rounded bg-cyanPrimary/20 text-cyanGlow font-mono text-[10px] font-bold">48ms</span>
+                            </div>
+                            <div class="text-xs font-bold text-white">SIP Buffer & VAD</div>
+                            <div class="text-[10px] text-slate-400">Voice activity detection buffer.</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+                                <div class="bg-cyanGlow h-full w-[13%]"></div>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
-                            <span class="w-12 h-9 rounded-lg bg-indigoPrimary/20 text-indigoGlow flex items-center justify-center font-mono text-xs font-bold">145ms</span>
-                            <div class="text-xs text-slate-300">Air-gapped SLM domain intent extraction & context mapping.</div>
+
+                        <div class="p-3.5 rounded-xl bg-surface/70 border border-indigoPrimary/40 space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-indigoGlow font-bold">STAGE 02</span>
+                                <span class="px-2 py-0.5 rounded bg-indigoPrimary/20 text-indigoGlow font-mono text-[10px] font-bold">62ms</span>
+                            </div>
+                            <div class="text-xs font-bold text-white">Streaming ASR</div>
+                            <div class="text-[10px] text-slate-400">Edge phoneme tokenizer.</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+                                <div class="bg-indigoGlow h-full w-[17%]"></div>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3 p-2 rounded-xl bg-surface/50 border border-white/5">
-                            <span class="w-12 h-9 rounded-lg bg-anshuGold/20 text-anshuGold flex items-center justify-center font-mono text-xs font-bold">104ms</span>
-                            <div class="text-xs text-slate-300">Neural audio stream packet dispatch over enterprise WebRTC.</div>
+
+                        <div class="p-3.5 rounded-xl bg-surface/70 border border-purple-500/40 space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-purple-400 font-bold">STAGE 03</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold">145ms</span>
+                            </div>
+                            <div class="text-xs font-bold text-white">Sovereign SLM</div>
+                            <div class="text-[10px] text-slate-400">Zero-retention intent dispatch.</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+                                <div class="bg-purple-400 h-full w-[40%]"></div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-surface/70 border border-anshuGold/40 space-y-1.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-anshuGold font-bold">STAGE 04</span>
+                                <span class="px-2 py-0.5 rounded bg-anshuGold/20 text-anshuGold font-mono text-[10px] font-bold">104ms</span>
+                            </div>
+                            <div class="text-xs font-bold text-white">Neural TTS Burst</div>
+                            <div class="text-[10px] text-slate-400">First audio chunk over WebRTC.</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mt-1">
+                                <div class="bg-anshuGold h-full w-[29%]"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="pt-3">
+                    <!-- Certified Pipeline Total Banner -->
+                    <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+                            <span class="text-xs font-mono text-emerald-300 font-bold">ROUND-TRIP TOTAL: 359ms</span>
+                        </div>
+                        <span class="text-[11px] text-emerald-400 font-bold uppercase tracking-wider">Certified Under 400ms SLA</span>
+                    </div>
+
+                    <div class="pt-2">
                         <button id="voiceSimulateBtn" class="btn-cyan-pill px-6 py-3.5 text-xs uppercase tracking-wider flex items-center gap-2.5 font-bold shadow-[0_0_25px_rgba(6,182,212,0.25)] shimmer-trigger">
                             <i class="fa-solid fa-play"></i>
                             <span>Run Voice Telemetry Benchmark</span>
@@ -654,31 +841,82 @@
                     </div>
                 </div>
 
-                <!-- Outputs Bento Grid -->
-                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bento-card p-6 space-y-2 border-indigoPrimary/60 bg-surface/90 bento-glow-indigo">
-                        <div class="text-[11px] font-mono text-indigoGlow uppercase tracking-wider">Vellicor Delivery Velocity</div>
-                        <div id="calcVellicorTime" class="text-3xl sm:text-4xl font-extrabold text-white font-heading">8–12 Weeks</div>
-                        <div class="text-xs text-slate-400">Guaranteed production go-live under US MSA.</div>
+                <!-- Outputs Bento Grid with Graphical Gantt Timeline -->
+                <div class="lg:col-span-7 space-y-4">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bento-card p-5 space-y-1.5 border-indigoPrimary/60 bg-surface/90 bento-glow-indigo">
+                            <div class="text-[11px] font-mono text-indigoGlow uppercase tracking-wider">Vellicor Delivery Velocity</div>
+                            <div id="calcVellicorTime" class="text-3xl font-extrabold text-white font-heading">8–12 Weeks</div>
+                            <div class="text-xs text-slate-400">Guaranteed production go-live under US MSA.</div>
+                        </div>
+
+                        <div class="bento-card p-5 space-y-1.5 border-white/10 bg-surface/40">
+                            <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Legacy Big-4 Timeline</div>
+                            <div id="calcTraditionalTime" class="text-3xl font-extrabold text-slate-400 font-heading">14–18 Months</div>
+                            <div class="text-xs text-slate-500">Riddled with change orders & discovery voids.</div>
+                        </div>
+
+                        <div class="bento-card p-5 space-y-1.5 border-anshuGold/40 bg-surface/80 bento-glow-gold">
+                            <div class="text-[11px] font-mono text-anshuGold uppercase tracking-wider">Estimated TCO Advantage</div>
+                            <div id="calcCostSavings" class="text-2xl font-extrabold text-anshuGold font-heading">60% TCO Savings</div>
+                            <div class="text-xs text-slate-400">Elimination of junior bench & endless billable hours.</div>
+                        </div>
+
+                        <div class="bento-card p-5 space-y-1.5 border-cyanPrimary/40 bg-surface/80 bento-glow-cyan">
+                            <div class="text-[11px] font-mono text-cyanGlow uppercase tracking-wider">Architectural Integrity</div>
+                            <div id="calcArchitectureScore" class="text-sm font-bold text-white font-heading">CSDM 4.0 Clean Core & Zero Debt</div>
+                            <div class="text-xs text-slate-400">Top 1% Certified Technical Architect oversight.</div>
+                        </div>
                     </div>
 
-                    <div class="bento-card p-6 space-y-2 border-white/10 bg-surface/40">
-                        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Legacy Big-4 Timeline</div>
-                        <div id="calcTraditionalTime" class="text-3xl sm:text-4xl font-extrabold text-slate-400 font-heading">14–18 Months</div>
-                        <div class="text-xs text-slate-500">Riddled with change orders & discovery voids.</div>
+                    <!-- GRAPHICAL ELEMENT 5: VISUAL VELOCITY GANTT COMPARISON -->
+                    <div class="bento-card p-5 space-y-4 border-indigoPrimary/30 bg-deep/90">
+                        <div class="flex items-center justify-between text-xs font-mono">
+                            <span class="text-slate-300 font-bold flex items-center gap-2">
+                                <i class="fa-solid fa-chart-gantt text-cyanGlow"></i>
+                                TIMELINE COMPARISON GANTT
+                            </span>
+                            <span class="text-[10px] text-cyanGlow">MEASURED IN CALENDAR QUARTERS</span>
+                        </div>
+
+                        <!-- Vellicor Track -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-xs">
+                                <span class="font-bold text-white flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-cyanGlow"></span>
+                                    Vellicor Delivery Engine (8–12 Weeks Production Ready)
+                                </span>
+                                <span class="text-cyanGlow font-mono font-bold text-[11px]">⚡ LIVE CUTOVER</span>
+                            </div>
+                            <div class="w-full bg-slate-800/80 h-8 rounded-xl p-1 flex">
+                                <div class="h-full bg-gradient-to-r from-cyanPrimary via-indigoPrimary to-anshuGold rounded-lg flex items-center justify-between px-3 text-[10px] font-mono text-white font-bold" style="width: 25%;">
+                                    <span>Wk 1–12</span>
+                                    <span>Go-Live</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Big-4 Track -->
+                        <div class="space-y-1.5 opacity-60">
+                            <div class="flex justify-between text-xs">
+                                <span class="font-bold text-slate-400 flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+                                    Traditional Big-4 Consultancy (14–18 Months Waterfall)
+                                </span>
+                                <span class="text-slate-500 font-mono text-[10px]">Discovery Voids & Overages</span>
+                            </div>
+                            <div class="w-full bg-slate-800/80 h-8 rounded-xl p-1 flex">
+                                <div class="h-full bg-slate-600 rounded-lg flex items-center justify-between px-3 text-[10px] font-mono text-slate-300" style="width: 95%;">
+                                    <span>M1: Ramp Up</span>
+                                    <span>M6: Discovery Void</span>
+                                    <span>M14: Change Orders</span>
+                                    <span>M18: Delayed Cutover</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="bento-card p-6 space-y-2 border-anshuGold/40 bg-surface/80 bento-glow-gold">
-                        <div class="text-[11px] font-mono text-anshuGold uppercase tracking-wider">Estimated TCO Advantage</div>
-                        <div id="calcCostSavings" class="text-2xl sm:text-3xl font-extrabold text-anshuGold font-heading">60% TCO Savings</div>
-                        <div class="text-xs text-slate-400">Elimination of junior bench & endless billable hours.</div>
-                    </div>
-
-                    <div class="bento-card p-6 space-y-2 border-cyanPrimary/40 bg-surface/80 bento-glow-cyan">
-                        <div class="text-[11px] font-mono text-cyanGlow uppercase tracking-wider">Architectural Integrity</div>
-                        <div id="calcArchitectureScore" class="text-base sm:text-lg font-bold text-white font-heading">CSDM 4.0 Clean Core & Zero Debt</div>
-                        <div class="text-xs text-slate-400">Top 1% Certified Technical Architect oversight.</div>
-                    </div>
                 </div>
             </div>
 
@@ -700,6 +938,69 @@
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Designed for defense, healthcare, and financial services institutions requiring air-tight regulatory isolation and auditability.
                 </p>
+            </div>
+
+            <!-- GRAPHICAL ELEMENT 4: CSDM 4.0 CLEAN CORE "ZERO-DEBT" ARCHITECTURAL STACK DIAGRAM -->
+            <div class="bento-card p-6 sm:p-8 bg-surface/80 border border-indigoPrimary/30">
+                <div class="flex items-center justify-between pb-4 mb-6 border-b border-indigoPrimary/20">
+                    <div class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-cubes-stacked text-cyanGlow"></i>
+                        <span class="text-sm font-bold text-white font-heading">CSDM 4.0 Clean Core "Zero Technical Debt" Architecture</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-indigoGlow bg-indigoPrimary/10 border border-indigoPrimary/30 px-2.5 py-0.5 rounded">
+                        STANDARDIZED OOTB COMPLIANCE
+                    </span>
+                </div>
+
+                <div class="max-w-3xl mx-auto space-y-3 font-mono text-xs">
+                    <!-- Tier 1 -->
+                    <div class="p-3.5 rounded-xl bg-indigoPrimary/20 border border-indigoPrimary/40 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-scale-balanced text-indigoGlow text-base"></i>
+                            <div>
+                                <div class="text-white font-bold">TIER 1: Institutional Governance & US Contracting</div>
+                                <div class="text-[10px] text-slate-300">Delaware Parent Umbrella, Enforceable MSA, SOC2 / HIPAA Sovereign Boundary</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-indigoPrimary/30 text-indigoGlow text-[10px] font-bold">US PARENT</span>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="p-3.5 rounded-xl bg-cyanPrimary/20 border border-cyanPrimary/40 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-compass-drafting text-cyanGlow text-base"></i>
+                            <div>
+                                <div class="text-white font-bold">TIER 2: Certified Technical Architect (CTA) Oversight</div>
+                                <div class="text-[10px] text-slate-300">CSDM 4.0 Clean Core, Domain Separation, Zero Customization Debt</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-cyanPrimary/30 text-cyanGlow text-[10px] font-bold">CTA BLUEPRINT</span>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="p-3.5 rounded-xl bg-anshuGold/20 border border-anshuGold/40 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-anshuGold text-base"></i>
+                            <div>
+                                <div class="text-white font-bold">TIER 3: High-Velocity Engineering Delivery CoE</div>
+                                <div class="text-[10px] text-slate-300">AnshuAI Bengaluru Sprints, HeadStart Accelerators, Sub-400ms Voice Telephony</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-anshuGold/30 text-anshuGold text-[10px] font-bold">APAC CoE</span>
+                    </div>
+
+                    <!-- Tier 4 Base -->
+                    <div class="p-3.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
+                            <div>
+                                <div class="text-white font-bold">TIER 4: Air-Gapped Sovereign Deployment</div>
+                                <div class="text-[10px] text-slate-300">Client-Controlled VPC, Zero Egress Telemetry, Client-Retained Model Weights</div>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-emerald-500/30 text-emerald-400 text-[10px] font-bold">SOVEREIGN VPC</span>
+                    </div>
+                </div>
             </div>
 
             <!-- Bento Compliance Cards -->
