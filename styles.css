@@ -1,7 +1,10 @@
 /* ==========================================================================
-   Vellicor Technologies Ltd — Corporate US Enterprise Theme
+   Vellicor Technologies Ltd — Thoughtworks-Inspired Enterprise Theme
    Palette: Deep Obsidian Navy, Titanium Slate, Electric Indigo & Hyper Cyan
+   Typography: Bitter (Editorial Slab Serif Headings) + Inter (Technical UI Sans)
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap');
 
 :root {
   --bg-deep: #060B14;
@@ -73,6 +76,94 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #6366F1;
+}
+
+/* Thoughtworks Typography Engine */
+.font-heading, h1, h2, h3, .tw-headline {
+  font-family: 'Bitter', Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+body, .font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Thoughtworks Card & Interaction Patterns */
+.tw-editorial-card {
+  background: rgba(11, 19, 43, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tw-editorial-card:hover {
+  background: rgba(16, 28, 64, 0.92);
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+.tw-editorial-card:hover .tw-arrow {
+  transform: translateX(4px);
+  color: #22D3EE;
+}
+
+.tw-arrow {
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+/* Category kicker badges */
+.tw-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tw-stat-card {
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+  padding-left: 1.5rem;
+  transition: border-color 0.25s ease;
+}
+
+.tw-stat-card:hover {
+  border-left-color: #22D3EE;
+}
+
+.tw-coral-badge {
+  background: rgba(242, 97, 122, 0.12);
+  border: 1px solid rgba(242, 97, 122, 0.4);
+  color: #F2617A;
+}
+
+.tw-radar-ring-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* Theme Cards */
