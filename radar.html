@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Technology Radar | Vellicor Technologies Ltd</title>
+    <meta name="description" content="The Vellicor Enterprise Technology Radar — A strategic architecture guide for CTOs and enterprise architects across Sovereign AI, ServiceNow Clean Core (CSDM 4.0), Low-Latency Voice, and Institutional Governance.">
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Enterprise Technology Radar | Vellicor Technologies Ltd">
+    <meta property="og:description" content="Strategic advisory on Adopt, Trial, Assess, and Hold technologies across enterprise platform modernization and sovereign AI.">
+    <meta property="og:type" content="website">
+
+    <!-- Security Headers via Meta -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https: 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./logo-icon.svg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#060B14',
+                        surface: '#0B132B',
+                        indigoGlow: '#818CF8',
+                        indigoPrimary: '#6366F1',
+                        cyanGlow: '#22D3EE',
+                        cyanPrimary: '#06B6D4',
+                        anshuGold: '#D4AF37',
+                        anshuTeal: '#14B8A6',
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .radar-ring {
+            fill: none;
+            stroke-width: 1.5;
+            transition: all 0.3s ease;
+        }
+        .blip-node {
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+        .blip-node:hover {
+            transform: scale(1.4);
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+        .blip-node.active-blip {
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 12px currentColor);
+        }
+    </style>
+</head>
+<body class="bg-deep text-slate-100 font-sans selection:bg-indigoPrimary/30 selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Background Lighting -->
+    <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-indigoPrimary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed top-1/3 right-10 w-[500px] h-[500px] bg-cyanPrimary/10 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-10 left-10 w-[600px] h-[600px] bg-anshuGold/6 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+    <!-- HEADER NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+        <div id="navbar" class="max-w-7xl mx-auto rounded-full bg-surface/90 backdrop-blur-xl border border-indigoPrimary/30 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl transition-all">
+            
+            <!-- Brand Logo -->
+            <a href="./index.html" class="flex items-center gap-3 group flex-shrink-0">
+                <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-7 sm:h-8 w-auto">
+            </a>
+
+            <!-- Streamlined Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-1 sm:gap-1.5">
+                <a href="./index.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.06] rounded-full transition whitespace-nowrap">Home</a>
+                <a href="./about.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.06] rounded-full transition whitespace-nowrap">About</a>
+                <a href="./solutions.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.06] rounded-full transition whitespace-nowrap">Solutions</a>
+                <a href="./radar.html" class="px-3 py-1.5 text-xs font-semibold text-indigoGlow bg-white/[0.08] border border-indigoPrimary/40 rounded-full transition whitespace-nowrap flex items-center shadow-[0_0_15px_rgba(99,102,241,0.25)]">
+                    <i class="fa-solid fa-radar mr-1.5 text-[10px]"></i>Radar
+                </a>
+                <a href="./subsidiaries.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-anshuGold hover:bg-white/[0.06] rounded-full transition whitespace-nowrap flex items-center">
+                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-anshuGold mr-1.5"></span>AnshuAI CoE
+                </a>
+                <a href="./portal.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-cyanGlow hover:bg-white/[0.06] rounded-full transition whitespace-nowrap flex items-center">
+                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-cyanGlow mr-1.5 pulse-dot"></span>Portal
+                </a>
+                <a href="./contact.html" class="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/[0.06] rounded-full transition whitespace-nowrap">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <a href="./contact.html" class="btn-indigo-solid px-4 sm:px-5 py-1.5 sm:py-2 text-xs uppercase tracking-wider flex items-center gap-2 whitespace-nowrap shimmer-trigger">
+                    <span>Executive Briefing</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="md:hidden text-slate-200 hover:text-white p-2 min-w-[36px] min-h-[36px] flex items-center justify-center rounded-lg border border-indigoPrimary/30 focus:outline-none">
+                    <i class="fa-solid fa-bars text-base" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-2 mx-auto max-w-lg rounded-2xl bg-surface/98 backdrop-blur-2xl border border-indigoPrimary/40 p-5 shadow-2xl transition-all">
+            <div class="flex flex-col gap-2.5 text-sm font-semibold text-slate-200">
+                <a href="./index.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5">Home</a>
+                <a href="./about.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5">About & Governance</a>
+                <a href="./solutions.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5">Enterprise Solutions</a>
+                <a href="./radar.html" class="mobile-nav-link p-2 rounded-lg text-indigoGlow bg-white/5 border border-indigoPrimary/30">
+                    <i class="fa-solid fa-radar mr-2"></i>Technology Radar
+                </a>
+                <a href="./subsidiaries.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 text-anshuGold">
+                    <span class="inline-block w-2 h-2 rounded-full bg-anshuGold mr-1.5"></span>AnshuAI Technologies (CoE)
+                </a>
+                <a href="./portal.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5 text-cyanGlow">
+                    <span class="inline-block w-2 h-2 rounded-full bg-cyanGlow mr-1.5 pulse-dot"></span>Enterprise Operating Portal
+                </a>
+                <a href="./contact.html" class="mobile-nav-link p-2 rounded-lg hover:bg-white/5">Contact & Briefing</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: THE VELLICOR TECHNOLOGY RADAR -->
+    <section class="relative pt-32 pb-14 lg:pt-36 lg:pb-16 overflow-hidden border-b border-indigoPrimary/20 bg-dot-matrix">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <div class="max-w-3xl space-y-4">
+                <div class="hud-pill text-indigoGlow border-indigoPrimary/40 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+                    <i class="fa-solid fa-radar text-indigoGlow animate-spin"></i>
+                    <span class="font-mono tracking-wider">VELLICOR TECHNOLOGY RADAR // VOL. 1</span>
+                    <span class="text-slate-500">•</span>
+                    <span class="text-emerald-400 font-mono">Q4 2026 EDITION</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+                    Enterprise <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyanGlow via-white to-anshuGold">Technology Radar</span>
+                </h1>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Inspired by Thoughtworks' pioneering engineering methodology, the Vellicor Technology Radar provides enterprise CTOs, Chief Architects, and transformation leaders with an authoritative assessment of technologies across <strong>Adopt</strong>, <strong>Trial</strong>, <strong>Assess</strong>, and <strong>Hold</strong>.
+                </p>
+            </div>
+
+            <!-- Radar Ring Legend Banner -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+                <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                    <div>
+                        <div class="font-bold text-emerald-300">ADOPT</div>
+                        <div class="text-[10px] text-slate-400">Strongly recommended for production</div>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-cyanPrimary/10 border border-cyanPrimary/30 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-cyanGlow"></span>
+                    <div>
+                        <div class="font-bold text-cyanGlow">TRIAL</div>
+                        <div class="text-[10px] text-slate-400">Worth pursuing on pilot projects</div>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-anshuGold/10 border border-anshuGold/30 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-anshuGold"></span>
+                    <div>
+                        <div class="font-bold text-anshuGold">ASSESS</div>
+                        <div class="text-[10px] text-slate-400">Explore to understand impact</div>
+                    </div>
+                </div>
+                <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center gap-2.5">
+                    <span class="w-3 h-3 rounded-full bg-rose-400"></span>
+                    <div>
+                        <div class="font-bold text-rose-300">HOLD</div>
+                        <div class="text-[10px] text-slate-400">Anti-pattern: proceed with caution</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE RADAR EXPLORER -->
+    <section class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            
+            <!-- Filter Bar & Search -->
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-4 rounded-2xl bg-surface/80 border border-indigoPrimary/30">
+                <!-- Quadrant Filter Pills -->
+                <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono">
+                    <button class="radar-filter-quadrant px-3 py-1.5 rounded-full bg-white/10 text-white border border-indigoPrimary active" data-quadrant="all">
+                        All Quadrants
+                    </button>
+                    <button class="radar-filter-quadrant px-3 py-1.5 rounded-full text-slate-400 hover:text-white border border-transparent" data-quadrant="ai">
+                        Sovereign AI & Voice
+                    </button>
+                    <button class="radar-filter-quadrant px-3 py-1.5 rounded-full text-slate-400 hover:text-white border border-transparent" data-quadrant="servicenow">
+                        ServiceNow Clean Core
+                    </button>
+                    <button class="radar-filter-quadrant px-3 py-1.5 rounded-full text-slate-400 hover:text-white border border-transparent" data-quadrant="velocity">
+                        Engineering Velocity
+                    </button>
+                    <button class="radar-filter-quadrant px-3 py-1.5 rounded-full text-slate-400 hover:text-white border border-transparent" data-quadrant="governance">
+                        Institutional Governance
+                    </button>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative min-w-[240px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                    <input type="text" id="radarSearchInput" placeholder="Filter blips (e.g., CSDM, Voice)..." class="w-full bg-deep border border-indigoPrimary/40 rounded-xl pl-9 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyanPrimary font-mono">
+                </div>
+            </div>
+
+            <!-- MAIN RADAR VIEWPORT & INSPECTOR GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- RADAR SVG CANVAS (8 COLS) -->
+                <div class="lg:col-span-7 bento-card cyber-frame p-6 sm:p-8 border border-indigoPrimary/40 relative flex items-center justify-center bg-surface/70">
+                    
+                    <svg id="radarSvg" viewBox="0 0 600 600" class="w-full max-w-[560px] h-auto select-none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="radarCenterGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#0E2147" stop-opacity="0.9"/>
+                                <stop offset="60%" stop-color="#061226" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="#060B14" stop-opacity="0"/>
+                            </radialGradient>
+                            <filter id="blipGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                                <feMerge>
+                                    <feMergeNode in="blur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Background radial glow -->
+                        <circle cx="300" cy="300" r="280" fill="url(#radarCenterGlow)"/>
+
+                        <!-- 4 Concentric Rings -->
+                        <!-- Ring 4: HOLD (Outer) -->
+                        <circle cx="300" cy="300" r="270" stroke="rgba(244, 63, 94, 0.3)" class="radar-ring" stroke-dasharray="4 4"/>
+                        <text x="300" y="45" text-anchor="middle" fill="#F43F5E" font-family="'JetBrains Mono', monospace" font-size="9" opacity="0.8">HOLD</text>
+
+                        <!-- Ring 3: ASSESS -->
+                        <circle cx="300" cy="300" r="210" stroke="rgba(212, 175, 55, 0.3)" class="radar-ring" stroke-dasharray="4 4"/>
+                        <text x="300" y="105" text-anchor="middle" fill="#D4AF37" font-family="'JetBrains Mono', monospace" font-size="9" opacity="0.8">ASSESS</text>
+
+                        <!-- Ring 2: TRIAL -->
+                        <circle cx="300" cy="300" r="145" stroke="rgba(34, 211, 238, 0.35)" class="radar-ring"/>
+                        <text x="300" y="170" text-anchor="middle" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="9" opacity="0.85">TRIAL</text>
+
+                        <!-- Ring 1: ADOPT (Inner) -->
+                        <circle cx="300" cy="300" r="80" stroke="rgba(52, 211, 153, 0.45)" class="radar-ring" fill="rgba(52, 211, 153, 0.03)"/>
+                        <text x="300" y="235" text-anchor="middle" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">ADOPT</text>
+
+                        <!-- Quadrant Crosshairs -->
+                        <line x1="300" y1="20" x2="300" y2="580" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                        <line x1="20" y1="300" x2="580" y2="300" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+                        <!-- Quadrant Labels -->
+                        <text x="315" y="32" fill="#22D3EE" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">Q1: SOVEREIGN AI & VOICE</text>
+                        <text x="315" y="575" fill="#D4AF37" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">Q2: SERVICENOW CLEAN CORE</text>
+                        <text x="285" y="575" text-anchor="end" fill="#818CF8" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">Q3: ENGINEERING VELOCITY</text>
+                        <text x="285" y="32" text-anchor="end" fill="#34D399" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">Q4: GOVERNANCE & VPC</text>
+
+                        <!-- Rotating Radar Sweep Beam -->
+                        <line x1="300" y1="300" x2="300" y2="30" stroke="url(#heroArcGradient)" stroke-width="2" opacity="0.4" class="radar-sweep-line" style="transform-origin: 300px 300px;"/>
+
+                        <!-- BLIPS CONTAINER (Interactive SVG Circles) -->
+                        <g id="blipsGroup">
+                            <!-- Populated dynamically via script or inline -->
+                        </g>
+                    </svg>
+
+                </div>
+
+                <!-- BLIP DETAIL INSPECTOR (5 COLS) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div id="radarInspector" class="bento-card cyber-frame p-6 sm:p-8 border border-indigoPrimary/40 space-y-6 bg-surface/90">
+                        <!-- Default Initial State -->
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between pb-3 border-b border-indigoPrimary/20">
+                                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                                    RING: ADOPT
+                                </span>
+                                <span class="text-xs font-mono text-slate-400">Blip #01 of 16</span>
+                            </div>
+
+                            <div>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-cyanGlow">Quadrant 1: Sovereign AI & Voice</span>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-white font-heading mt-1">Sub-400ms Full-Duplex Voice Telephony</h3>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Natural human conversational turn-taking requires round-trip latency under 450ms. By coupling streaming phoneme tokenization with state-space speech synthesis and native WebRTC/SIP trunks, AnshuAI achieves a certified 359ms latency benchmark without speech collisions.
+                            </p>
+
+                            <div class="p-3.5 rounded-xl bg-deep/80 border border-white/5 space-y-2 text-xs font-mono">
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">CTA Recommendation:</span>
+                                    <span class="text-emerald-400 font-bold">Adopt for Tier-1 Contact Centers</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Velocity Advantage:</span>
+                                    <span class="text-white font-bold">4–6 Week Go-Live</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Data Boundary:</span>
+                                    <span class="text-cyanGlow font-bold">Private WebRTC / Zero Retention</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <a href="./portal.html#telemetry" class="btn-cyan-pill w-full text-center py-2.5 text-xs uppercase tracking-wider block font-bold">
+                                    <i class="fa-solid fa-play mr-1.5"></i> Test In Voice Telemetry Lab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blip Catalog Quick-Select List -->
+                    <div class="bento-card p-4 border border-white/10 space-y-3 max-h-[320px] overflow-y-auto" id="radarQuickList">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EVOLUTIONARY ARCHITECTURE PLAYBOOK (THOUGHTWORKS-STYLE METHODOLOGY) -->
+    <section class="py-20 bg-surface/30 border-t border-indigoPrimary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <div class="hud-pill text-cyanGlow border-cyanPrimary/30">
+                    <i class="fa-solid fa-layer-group text-cyanGlow"></i>
+                    <span>ARCHITECTURAL PLAYBOOK</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Vellicor Evolutionary Architecture Tenets
+                </h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    How Vellicor balances rapid kinetic transformation with institutional Delaware holding governance to guarantee zero technical debt.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bento-card cyber-frame p-6 space-y-4 border-white/10 hover:border-indigoPrimary/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-indigoPrimary/20 border border-indigoPrimary/40 flex items-center justify-center text-indigoGlow text-xl">
+                        <i class="fa-solid fa-code-compare"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">Automated Architectural Fitness Functions</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Rather than static annual audits, automated CI/CD guardrails run continuous fitness functions verifying zero customization debt against core ServiceNow tables.
+                    </p>
+                </div>
+
+                <div class="bento-card cyber-frame p-6 space-y-4 border-white/10 hover:border-cyanPrimary/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-cyanPrimary/20 border border-cyanPrimary/40 flex items-center justify-center text-cyanGlow text-xl">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">Domain-Driven Clean Core (CSDM 4.0)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Strict separation of Business Applications, Technical Services, and Foundation data models ensuring zero cross-boundary pollution and 1-click major release upgrades.
+                    </p>
+                </div>
+
+                <div class="bento-card cyber-frame p-6 space-y-4 border-white/10 hover:border-anshuGold/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-anshuGold/20 border border-anshuGold/40 flex items-center justify-center text-anshuGold text-xl">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">Follow-the-Sun Agile Sprints</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        US architecture oversight hands off to AnshuAI Bengaluru CoE engineering squads daily, enabling a continuous 24-hour sprint lifecycle that collapses 12-month roadmaps into 8–12 weeks.
+                    </p>
+                </div>
+
+                <div class="bento-card cyber-frame p-6 space-y-4 border-white/10 hover:border-emerald-400/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white font-heading">Sovereign Air-Gapped Isolation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        All proprietary models and fine-tuned weights remain 100% client-retained within private VPCs, completely air-gapped from multi-tenant commercial cloud telemetry.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / RADAR CONSULTATION INTAKE -->
+    <section class="py-20 relative bg-surface/30 border-t border-indigoPrimary/25">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="hud-pill text-indigoGlow border-indigoPrimary/30">
+                <i class="fa-solid fa-handshake text-indigoGlow"></i>
+                <span>CTO & ARCHITECTURE CONSULTATION</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                Request a Custom Technology Radar Briefing
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Schedule a confidential working session with Vellicor's US Certified Technical Architects to map your enterprise architecture against our Radar benchmarks.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="./contact.html" class="btn-indigo-solid px-8 py-3.5 text-xs uppercase tracking-wider shimmer-trigger">
+                    Schedule Executive Briefing
+                </a>
+                <a href="./portal.html" class="btn-indigo-pill px-7 py-3.5 text-xs font-semibold">
+                    Launch Operating Portal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-deep border-t border-indigoPrimary/20 pt-16 pb-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div class="lg:col-span-2 space-y-4">
+                    <img src="./logo.svg" alt="Vellicor Technologies Ltd" class="h-8 w-auto">
+                    <p class="text-slate-400 leading-relaxed max-w-sm">
+                        Vellicor Technologies Ltd is a US enterprise technology holding company providing governance, sovereign AI systems, and platform modernization across North America and global markets.
+                    </p>
+                    <div class="text-[11px] text-indigoGlow">
+                        Corporate Headquarters: <strong>United States</strong> • Operating Subsidiary: <strong>AnshuAI Technologies Pvt. Ltd.</strong>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Capabilities</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./solutions.html#sovereign-ai" class="hover:text-indigoGlow transition">Sovereign Enterprise AI</a></li>
+                        <li><a href="./solutions.html#servicenow" class="hover:text-indigoGlow transition">ServiceNow Architecture</a></li>
+                        <li><a href="./solutions.html#voice-telephony" class="hover:text-indigoGlow transition">Autonomous Voice Agents</a></li>
+                        <li><a href="./solutions.html#integration" class="hover:text-indigoGlow transition">Enterprise Integration Hub</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Thought Leadership</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./radar.html" class="text-indigoGlow font-semibold hover:underline">Technology Radar</a></li>
+                        <li><a href="./about.html#governance" class="hover:text-indigoGlow transition">CSDM 4.0 Clean Core</a></li>
+                        <li><a href="./portal.html#telemetry" class="hover:text-indigoGlow transition">Sub-400ms Voice Benchmarks</a></li>
+                        <li><a href="./subsidiaries.html" class="hover:text-anshuGold transition">Bengaluru Delivery CoE</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="hover:text-indigoGlow transition">About Vellicor</a></li>
+                        <li><a href="./portal.html" class="hover:text-indigoGlow transition">Enterprise Portal</a></li>
+                        <li><a href="./contact.html" class="hover:text-indigoGlow transition">Executive Briefings</a></li>
+                        <li><a href="mailto:admin@vellicortech.com" class="hover:text-indigoGlow transition">admin@vellicortech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-indigoPrimary/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <p>&copy; 2026 Vellicor Technologies Ltd. All rights reserved. Registered US Corporation.</p>
+                <div class="flex items-center gap-6">
+                    <a href="./about.html" class="hover:text-slate-300 transition">Security & Compliance</a>
+                    <a href="./radar.html" class="hover:text-slate-300 transition">Technology Radar</a>
+                    <a href="./portal.html" class="hover:text-slate-300 transition">Operating Telemetry</a>
+                    <a href="./contact.html" class="hover:text-slate-300 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- RADAR JAVASCRIPT CONTROLLER -->
+    <script src="./radar.js"></script>
+</body>
+</html>
