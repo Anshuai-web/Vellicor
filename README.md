@@ -73,7 +73,7 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
 ```
 /Users/deepakan/Desktop/Vellicor/
 ├── index.html            # Corporate Homepage & Velocity + Core Overview
-├── portal.html           # Enterprise Operating Portal & CoE Real-Time Console
+├── portal.html           # Enterprise Delivery Hub & Engineering Telemetry
 ├── about.html            # Mission, Dual-Continent Model, & CTA Governance
 ├── solutions.html        # Sovereign AI, ServiceNow, Voice Telephony, Integration
 ├── subsidiaries.html     # Dedicated Showcase for AnshuAI Technologies Pvt. Ltd.

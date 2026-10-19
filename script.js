@@ -1,5 +1,5 @@
 // ==========================================================================
-// Vellicor Technologies Ltd — Enterprise Operating Portal & CoE Console
+// Vellicor Technologies Ltd — Enterprise Delivery Hub & Engineering Telemetry
 // JavaScript Application Architecture: Velocity & Core Dual Engine
 // ==========================================================================
 
