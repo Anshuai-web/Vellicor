@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Vellicor Technologies Ltd — Thoughtworks-Inspired Enterprise Theme
+   Vellicor Technologies Ltd — Premium Editorial Enterprise Theme
    Palette: Deep Obsidian Navy, Titanium Slate, Electric Indigo & Hyper Cyan
    Typography: Bitter (Editorial Slab Serif Headings) + Inter (Technical UI Sans)
    ========================================================================== */
@@ -78,7 +78,7 @@ body {
   background: #6366F1;
 }
 
-/* Thoughtworks Typography Engine */
+/* Editorial Typography Engine */
 .font-heading, h1, h2, h3, .tw-headline {
   font-family: 'Bitter', Georgia, serif;
   letter-spacing: -0.015em;
@@ -92,7 +92,7 @@ body, .font-sans {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Thoughtworks Card & Interaction Patterns */
+/* Editorial Card & Interaction Patterns */
 .tw-editorial-card {
   background: rgba(11, 19, 43, 0.75);
   backdrop-filter: blur(16px);

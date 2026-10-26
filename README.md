@@ -64,7 +64,7 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
    - Real-time barge-in handling, automated call summarization, and direct CRM/ITSM ticket creation.
 
 4. **Enterprise Integration Hub:**
-   - Bidirectional event streaming between SAP, Salesforce, AWS, Azure, and legacy mainframes with sub-second message dispatch.
+   - Bidirectional event streaming between core ERP, CRM, multi-cloud platforms, and legacy mainframes with sub-second message dispatch.
 
 ---
 
@@ -90,7 +90,7 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
 
 ## 5. Deployment & GitHub Linking Guide
 
-This repository is self-contained and pre-configured for deployment to GitHub Pages, Cloudflare Pages, Netlify, or Vercel.
+This repository is self-contained and pre-configured for modern static web hosting and enterprise CDN deployment.
 
 ### Step 1: Create a GitHub Repository
 Log in to GitHub under your organization/account and create a new public or private repository named `Vellicor` (do not initialize with README or license, as they are already provided here).

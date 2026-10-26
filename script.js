@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             deliverables: [
                 "Air-Gapped VPC Deployment & Key Handover",
                 "Zero Third-Party Data Leak Verification",
-                "Sub-Second Bidirectional ERP/SAP Streaming Hub",
+                "Sub-Second Bidirectional ERP Streaming Hub",
                 "Ongoing CTA Health Score & Performance Audits"
             ],
             metrics: {

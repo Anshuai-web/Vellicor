@@ -1,6 +1,6 @@
 // ==========================================================================
 // Vellicor Technologies Ltd — Enterprise Technology Radar Controller
-// Inspired by Thoughtworks Technology Radar Architecture
+// Enterprise Technology Radar Architecture
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "#34D399",
             x: 335, y: 285, // ADOPT (r~38)
             lead: "Client-Retained Weights Isolated from Commercial Cloud Leaks",
-            description: "Deploying quantized small language models (SLMs) strictly inside client-governed AWS GovCloud or Azure Sovereign VPCs. Client proprietary datasets never traverse public multi-tenant APIs.",
+            description: "Deploying quantized small language models (SLMs) strictly inside client-governed sovereign VPCs and dedicated on-premise enclaves. Client proprietary datasets never traverse public multi-tenant APIs.",
             specs: {
                 cta: "Mandatory for Regulated Industries",
                 velocity: "6–8 Week Deployment",
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "#22D3EE",
             x: 410, y: 380, // TRIAL (r~136)
             lead: "Real-Time Normalized Topology Sync Across Multi-Cloud",
-            description: "Replacing brittle scheduled flat-file imports with certified Service Graph Connectors for AWS, Azure, GCP, and SAP, maintaining live sub-minute CMDB accuracy.",
+            description: "Replacing brittle scheduled flat-file imports with certified Service Graph Connectors across hybrid multi-cloud estates and core ERP systems, maintaining live sub-minute CMDB accuracy.",
             specs: {
                 cta: "Trial for Hybrid Cloud Estates",
                 velocity: "Sub-Minute Discovery Sync",
