@@ -56,24 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     const topologyNodes = {
         us: {
-            title: "Vellicor Technologies Ltd (Delaware, USA)",
-            subtitle: "Designated US Parent Corporate Holding & Institutional Anchor",
-            status: "SOVEREIGN JURISDICTION ACTIVE",
+            title: "Vellicor Technologies Ltd",
+            subtitle: "Global Enterprise Strategy & Executive Governance",
+            status: "EXECUTIVE OVERSIGHT ACTIVE",
             statusClass: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
-            icon: "fa-scale-balanced",
-            badge: "US Parent Node",
+            icon: "fa-compass-drafting",
+            badge: "Client Advisory Node",
             badgeClass: "bg-indigoPrimary/20 text-indigoGlow border-indigoPrimary/40",
-            description: "Direct contractual relationship under United States Delaware corporate law. Houses executive advisory, intellectual property patent custody, master client agreements (MSA), and top 1% ServiceNow Certified Technical Architect (CTA) governance.",
+            description: "Executive advisory, strategic platform direction, client success governance, and enterprise architecture standards ensuring alignment across complex multi-stakeholder transformations.",
             specs: [
-                { label: "Legal Jurisdiction", value: "Delaware, United States (Enforceable MSA)" },
-                { label: "Compliance Boundary", value: "SOC2 Type II, HIPAA FHIR, NIST 800-53" },
-                { label: "Architectural Lead", value: "ServiceNow CTA Certified Signoff" },
-                { label: "IP Protection", value: "Client-Retained Weights & Sovereign Escrow" }
+                { label: "Advisory Scope", value: "United States & Global Enterprise Markets" },
+                { label: "Security & Quality", value: "Enterprise Architecture & Best Practice Standards" },
+                { label: "Architecture Oversight", value: "Clean Core Enterprise Architecture" },
+                { label: "Client Governance", value: "Direct Engagement & Client IP Ownership" }
             ],
             metrics: {
-                metric1: { name: "Contract Enforceability", val: "100% US Court" },
-                metric2: { name: "Architectural Debt", val: "Zero-Debt Guardrails" },
-                metric3: { name: "Security Audit", val: "SOC2 Type II Continuous" }
+                metric1: { name: "Delivery Model", val: "Executive Governance" },
+                metric2: { name: "Architecture Quality", val: "Clean Core Guardrails" },
+                metric3: { name: "Data Security", val: "Zero-Trust Principles" }
             }
         },
         bridge: {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: "fa-shield-halved",
             badge: "Quantum-Safe Tunnel",
             badgeClass: "bg-cyanPrimary/20 text-cyanGlow border-cyanPrimary/40",
-            description: "Dedicated private virtual network pairing Delaware executive oversight with Bengaluru engineering execution. Enforces strict mutual TLS 1.3 encryption, client-isolated VPC peering, automated CI/CD continuous regression testing, and zero external egress leakage.",
+            description: "Dedicated private virtual network pairing executive strategy with Bengaluru engineering execution. Enforces strict mutual TLS 1.3 encryption, client-isolated VPC peering, automated CI/CD continuous regression testing, and zero external egress leakage.",
             specs: [
                 { label: "Transit Protocol", value: "Mutual TLS 1.3 / Air-Gapped VPC Peering" },
                 { label: "Round-Trip Latency", value: "182ms Transcontinental Fiber Trunk" },
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             metrics: {
                 metric1: { name: "Encryption Standard", val: "AES-256-GCM / Post-Quantum" },
-                metric2: { name: "Packet Loss", val: "0.00% Guaranteed SLA" },
+                metric2: { name: "Transit SLA", val: "High-Availability Transit" },
                 metric3: { name: "Handoff Velocity", val: "Continuous Follow-the-Sun" }
             }
         },
@@ -222,24 +222,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
     const stageData = {
         1: {
-            title: "US Jurisdiction & Sovereign Governance Lock",
-            entity: "Vellicor Technologies Ltd (US Parent)",
-            entityBadge: "US Parent Holding Entity",
+            title: "Executive Strategy & Engagement Governance",
+            entity: "Vellicor Technologies Ltd",
+            entityBadge: "Client Advisory & Governance",
             entityBadgeClass: "bg-indigoPrimary/20 text-indigoGlow border-indigoPrimary/40",
-            icon: "fa-scale-balanced",
-            lead: "North American C-Suite Legal, MSA & Compliance Architecture",
-            description: "Direct contractual relationship under United States law. Establishes sovereign data boundaries (SOC2 Type II, HIPAA, NIST 800-53) and executes master service agreements with client IP protections.",
+            icon: "fa-compass-drafting",
+            lead: "Enterprise Strategy, Engagement Framework & Architecture Alignment",
+            description: "Establishing mutual objectives, data governance guidelines, and standardized master service agreements with clear client ownership and security alignment.",
             deliverables: [
-                "US Delaware Legal Umbrella & Corporate MSA",
-                "Sovereign Zero-Retention Data Isolation Protocol",
+                "Master Services Engagement Agreement",
+                "Data Isolation & Privacy Guidelines",
                 "C-Suite Strategic Architecture Alignment",
-                "Patent & Enterprise IP Custody Shield"
+                "Enterprise IP & Code Ownership Alignment"
             ],
             metrics: {
                 timeline: "Days 1–5",
-                governance: "100% US Enforceable",
-                compliance: "SOC2 / HIPAA / FedRAMP ready",
-                risk: "Zero Offshore Legal Exposure"
+                governance: "Executive Alignment",
+                compliance: "Security Best Practices",
+                risk: "Transparent Governance"
             }
         },
         2: {
@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
             metrics: {
                 timeline: "Weeks 3–10 (Continuous Sprints)",
                 governance: "24/7 Follow-the-Sun Delivery",
-                compliance: "ISO 27001 & Dedicated Secure Dev Labs",
-                risk: "Guaranteed 8–12 Week Production Cutover"
+                compliance: "Secure Development Workflows",
+                risk: "Target 8–12 Week Production Cutover"
             }
         },
         4: {

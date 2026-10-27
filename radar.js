@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ringClass: "bg-rose-500/20 text-rose-400 border-rose-500/30",
             color: "#F43F5E",
             x: 480, y: 120, // HOLD (r~248)
-            lead: "Major Regulatory Risk: Third-Party Telemetry & Training Leaks",
-            description: "Routing sensitive customer PII or corporate source code to public multi-tenant LLM endpoints without strict BAA zero-retention guarantees exposes enterprises to major compliance sanctions.",
+            lead: "Enterprise Risk: Data Leakage & External Telemetry Egress",
+            description: "Routing sensitive enterprise data or proprietary code to public multi-tenant endpoints without proper privacy controls and private routing exposes data to leakage.",
             specs: {
-                cta: "HOLD / Cease Unregulated Usage",
-                velocity: "Violates HIPAA / SOC2",
-                boundary: "Uncontrolled Foreign Server Egress"
+                cta: "HOLD / Enforce Private Routing",
+                velocity: "Data Privacy Risk",
+                boundary: "Uncontrolled External Egress"
             },
             link: "./about.html#governance",
             linkText: "Read Sovereign Governance Policy"
@@ -280,26 +280,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- QUADRANT 4: INSTITUTIONAL GOVERNANCE & VPC (Top-Left) ---
         {
             id: 13,
-            name: "Delaware Corporate MSA Legal Umbrella",
+            name: "Enterprise Master Services Governance",
             quadrant: "governance",
             quadrantName: "Quadrant 4: Institutional Governance",
             ring: "ADOPT",
             ringClass: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
             color: "#34D399",
             x: 255, y: 255, // ADOPT (r~63)
-            lead: "Direct US Contract Enforceability with Client IP Custody Protections",
-            description: "All client engagements contract directly with Vellicor Technologies Ltd (Delaware, USA), shielding enterprises from cross-border legal jurisdiction ambiguities and overseas contract disputes.",
+            lead: "Direct Enterprise Contracting & Cohesive Delivery Governance",
+            description: "Client engagements are managed through standardized master service agreements, providing executive accountability, clear IP alignment, and transparent engagement frameworks.",
             specs: {
-                cta: "Mandatory Corporate Foundation",
-                velocity: "Standardized North American MSA",
-                boundary: "Delaware Corporate Law"
+                cta: "Governance Baseline",
+                velocity: "Standardized Enterprise MSA",
+                boundary: "Executive Account Governance"
             },
             link: "./about.html#governance",
-            linkText: "Inspect Legal Structure"
+            linkText: "Inspect Governance Model"
         },
         {
             id: 14,
-            name: "Automated SOC2 Type II & HIPAA Audit Trails",
+            name: "Automated Security & Audit Logging",
             quadrant: "governance",
             quadrantName: "Quadrant 4: Institutional Governance",
             ring: "ADOPT",
@@ -307,14 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
             color: "#34D399",
             x: 270, y: 230, // ADOPT (r~76)
             lead: "Continuous Tamper-Evident Security Log Aggregation",
-            description: "Real-time compliance monitoring across all development pipelines, development labs, and client VPC access points, backing institutional compliance guarantees.",
+            description: "Continuous telemetry and access logging across enterprise development workflows, supporting security visibility and audit readiness.",
             specs: {
-                cta: "Institutional Baseline",
-                velocity: "Audit-Ready Every Day",
+                cta: "Security Baseline",
+                velocity: "Audit-Ready Observability",
                 boundary: "Zero-Trust Architecture"
             },
             link: "./about.html",
-            linkText: "Review Compliance Vault"
+            linkText: "Review Security Standards"
         },
         {
             id: 15,
@@ -337,22 +337,22 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 16,
-            name: "Direct Unshielded Offshore Contracting",
+            name: "Ad-Hoc Unstructured Vendor Governance",
             quadrant: "governance",
             quadrantName: "Quadrant 4: Institutional Governance",
             ring: "HOLD",
             ringClass: "bg-rose-500/20 text-rose-400 border-rose-500/30",
             color: "#F43F5E",
             x: 110, y: 130, // HOLD (r~254)
-            lead: "Dangerous Exposure: Offshore IP Loss & Non-Enforceable Disputes",
-            description: "Signing enterprise master agreements directly with unshielded foreign vendors. If intellectual property is misappropriated, US courts cannot compel offshore entity enforcement.",
+            lead: "Operational Friction: Fragmented Accountability & Architectural Drift",
+            description: "Engaging disparate third-party development contractors without unified governance, enterprise architecture oversight, or cohesive accountability frameworks.",
             specs: {
-                cta: "HOLD / Require US Legal Parent",
-                velocity: "Severe Institutional Liability",
-                boundary: "Uncontrolled Cross-Border Risk"
+                cta: "HOLD / Adopt Unified Governance",
+                velocity: "Delivery Drift Risk",
+                boundary: "Fragmented Operations"
             },
             link: "./about.html#governance",
-            linkText: "Read Holding Group Governance"
+            linkText: "Read Governance Framework"
         }
     ];
 

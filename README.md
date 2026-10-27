@@ -24,10 +24,10 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
 |                      VELLICOR TECHNOLOGIES LTD                         |
 |                   (United States Corporate Parent)                     |
 |                                                                        |
-|  • US Jurisdiction & MSA Contracting                                   |
+|  • Enterprise Strategy & MSA Contracting                               |
 |  • C-Suite Strategic Architecture Advisory                             |
-|  • Sovereign Compliance (SOC2 Type II, HIPAA, NIST, ISO)               |
-|  • Corporate IP & Patent Portfolio Management                          |
+|  • Enterprise Security & Data Governance Standards                     |
+|  • Corporate IP & Technical Asset Management                           |
 +-----------------------------------+------------------------------------+
                                     |
                                     | Wholly Owned & Governed
@@ -40,7 +40,7 @@ Vellicor functions as the parent holding entity for **AnshuAI Technologies Pvt. 
 |  • Sub-400ms Autonomous Conversational Voice Telephony Engines         |
 |  • Autonomous ServiceDesk L1/L2 Incident Auto-Remediation              |
 |  • Industry Accelerators (Automotive, Healthcare, Manufacturing, FMCG) |
-|  • Guaranteed 8-12 Week Production Velocity                            |
+|  • High-Velocity 8–12 Week Production Cadence                          |
 +------------------------------------------------------------------------+
 ```
 
